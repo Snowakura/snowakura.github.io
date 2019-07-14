@@ -11,6 +11,19 @@ body {
   opacity: 0.75;
   min-height: auto;
 }
+body {
+  background: url("https://acg.toubiec.cn/random.php");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  margin-top: 50px;
+  padding: 0px 0px 0px 0px;
+  background: #fff;
+  opacity: 0.75;
+  min-height: auto;
+}
 /* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15; /* 1 */
@@ -1759,7 +1772,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1cffff;
+  background: #fff;
 }
 .feed-link,
 .chat {
@@ -2985,4 +2998,17 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("https://acg.toubiec.cn/random.php");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  margin-top: 50px;
+  padding: 0px 0px 0px 0px;
+  background: #fff;
+  opacity: 0.75;
+  min-height: auto;
 }
