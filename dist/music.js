@@ -54,7 +54,7 @@ const ap = new APlayer({
       {
         name: "3人でいる時間",
         artist: '北川勝利,帆足圭吾',
-        url: '/music/北川勝利,帆足圭吾 - 3人でいる時間.mp3',
+        url: 'https://snowakura.github.io/music/北川勝利,帆足圭吾 - 3人でいる時間.mp3',
         cover: 'http://p1.music.126.net/T2etSRdkmhn1Hlohu7Jbfg==/7716372604710408.jpg?param=130y130',
         
       },
