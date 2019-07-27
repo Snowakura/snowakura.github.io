@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/樱雪.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/樱雪.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/樱雪.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/樱雪.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    fancybox: false,
+    fastclick: true,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+
+
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://snowakura.github.io/");
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+  <meta name="description" content="title: 计算机网络(第7版)_谢希仁_第一章_笔记date: 2019-07-27 16:34:08categories: “计算机网络”tags: - 笔记description: 《计算机网络》(第7版)_谢希仁comments:password: lifuquan 本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机">
+<meta name="keywords" content="blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="樱落成雪的博客">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/index.html">
+<meta property="og:site_name" content="樱落成雪的博客">
+<meta property="og:description" content="title: 计算机网络(第7版)_谢希仁_第一章_笔记date: 2019-07-27 16:34:08categories: “计算机网络”tags: - 笔记description: 《计算机网络》(第7版)_谢希仁comments:password: lifuquan 本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.1-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3-2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.5-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-4.png">
+<meta property="og:updated_time" content="2019-07-27T16:05:01.563Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="樱落成雪的博客">
+<meta name="twitter:description" content="title: 计算机网络(第7版)_谢希仁_第一章_笔记date: 2019-07-27 16:34:08categories: “计算机网络”tags: - 笔记description: 《计算机网络》(第7版)_谢希仁comments:password: lifuquan 本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/27/images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.1-1.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title> | 樱落成雪的博客</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">樱落成雪的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Snowakura's blog</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">1</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  <!-- weather -->
+<script type="text/javascript">
+WIDGET = {FID: 'xOIWAfdIEd'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+
+         
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Snowakura">
+      <meta itemprop="description" content="这个博主太懒了,什么都没有写|•ω•`)">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="樱落成雪的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-27 16:34:08" itemprop="dateCreated datePublished" datetime="2019-07-27T16:34:08+08:00">2019-07-27</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-07-28 00:05:01" itemprop="dateModified" datetime="2019-07-28T00:05:01+08:00">2019-07-28</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          <br>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span title="本文字数">4.7k</span>
+            </span>
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              
+              <span title="阅读时长">8 分钟</span>
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>title: 计算机网络(第7版)_谢希仁_第一章_笔记<br>date: 2019-07-27 16:34:08<br>categories: “计算机网络”<br>tags:</p>
+<pre><code>- 笔记</code></pre><p>description: 《计算机网络》(第7版)_谢希仁<br>comments:<br>password: lifuquan</p>
+<p>本课程重要概念：计算机网络的体系结构。</p>
+<p>本章重要内容：</p>
+<ol>
+<li>互联网边缘部分和核心部分的作用，其中包含分组交换的概念。</li>
+<li>计算机网络的性能指标。</li>
+<li>计算机网络分层次的体系结构，包含协议和服务的概念。</li>
+</ol>
+<a id="more"></a>
+
+
+
+<h2 id="计算机网络在信息时代中的作用"><a href="#计算机网络在信息时代中的作用" class="headerlink" title="计算机网络在信息时代中的作用"></a>计算机网络在信息时代中的作用</h2><p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.1-1.png" alt="img"></p>
+<p>互联网两个重要基本特点：连通性和共享。</p>
+<h2 id="互联网概述"><a href="#互联网概述" class="headerlink" title="互联网概述"></a>互联网概述</h2><h3 id="网络的网络"><a href="#网络的网络" class="headerlink" title="网络的网络"></a>网络的网络</h3><div class="note ">
+            <p>计算机网络(简称网络)由若干结点(node)和连接这些节点的链路(link)组成。</p><p>网络之间通过路由器互连起来，构成一个覆盖范围更大的计算机网络，成为互连网(“网络的网络”)。</p><p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-1.png" alt="img"></p>
+          </div>
+
+<p>网络把许多计算机连接在一起，互连网把许多网络通过路由器连接在一起。与网络相连的计算机常称为主机。</p>
+<h3 id="互联网基础结构发展的三个阶段"><a href="#互联网基础结构发展的三个阶段" class="headerlink" title="互联网基础结构发展的三个阶段"></a>互联网基础结构发展的三个阶段</h3><ul>
+<li>一阶段是从单个网络ARPANET向互连网发展的过程。</li>
+</ul>
+<p>1983年TCP/IP协议成为ARPANET上的标准协议，使得所有使用TCP/IP协议的计算机都能利用互连网相互通信，因而将1983年作为互联网的诞生时间。所以互联网Internet前身为美国的ARPANET。</p>
+<ul>
+<li>二阶段特点是建成了三级结构的互联网。</li>
+</ul>
+<p>三级计算机网络分为主干网、地区网和校园网(企业网)。</p>
+<ul>
+<li>三阶段特点是逐渐形成多层次ISP结构的互联网。</li>
+</ul>
+<p>互联网服务提供商(Internet Service Provider)。</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-2.png" alt="img"></p>
+<p>互联网交换点IXP(Internet eXchange Point)：主要作用是允许两个网络直接相连并交换分组，而不再需要通过第三个网络来转发分组。由此可以更快地转发分组，更加有效地利用网络资源。</p>
+<h3 id="互联网的标准化工作"><a href="#互联网的标准化工作" class="headerlink" title="互联网的标准化工作"></a>互联网的标准化工作</h3><p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.2-3.png" alt="img"></p>
+<h2 id="互联网的组成"><a href="#互联网的组成" class="headerlink" title="互联网的组成"></a>互联网的组成</h2><p>互联网可分为两部分：</p>
+<p>​    -边缘部分。由所有连接在互联网上的主机组成，用户直接使用。</p>
+<p>​    -核心部分。由大量网络和路由器组成，为边缘部分提供服务。</p>
+<h3 id="互联网的边缘部分"><a href="#互联网的边缘部分" class="headerlink" title="互联网的边缘部分"></a>互联网的边缘部分</h3><p>端系统(边缘部分主机又称)之间的通信方式分为两大类：客户-服务器方式(C/S 方式)和对等方式(P2P 方式)。</p>
+<div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">客户-服务器方式</a></li><li class="tab"><a href="#标签-2">对等方式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>  (client/server)</p>
+<p>​    客户(client)是服务请求方，服务器(server)是服务提供方。</p>
+<p>客户程序：</p>
+<p>​    1.被用户调用后运行，在通信时主动向远地服务器发起通信。须知道服务器程序地址。</p>
+<p>​    2.不需要特殊的硬件和很复杂的操作系统。</p>
+<p>服务器程序：</p>
+<p>​    1.是一种专门用来提供某种服务的程序，可同时处理多个客户请求。</p>
+<p>​    2.不需知道客户程序地址。</p>
+<p>​    3.一般有强大的硬件和高级的操作系统支持。</p></div><div class="tab-pane" id="标签-2"><p>(peer-to-peer)</p>
+<p>双方进行平等的、对等连接通信。</p>
+<p>本质上看仍然是使用C/S方式，只是主机既是客户又同时是服务器。</p></div></div></div>
+
+
+
+<h3 id="互联网的核心部分"><a href="#互联网的核心部分" class="headerlink" title="互联网的核心部分"></a>互联网的核心部分</h3><p>在核心部分起特殊作用的是路由器，它是实现分组交换的关键构件，任务是转发收到的分组。</p>
+<p>分组交换采用存储转发技术。将数据分段为多个更小的等长数据段，在数据段前面添加首部，构成分组，又称”包”，首部又称”包头”。</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3-1.png" alt="img"></p>
+<p>分组交换的优点：</p>
+<p>​    1.高效。在分组传输的过程中动态分配传输带宽，对通信链路逐段占用</p>
+<p>​    2.灵活。为每个分组独立地选择最合适的转发路由</p>
+<p>​    3.迅速。以分组作为传送单位，可以先不建立连接就能发送分组</p>
+<p>​    4.可靠。分布式多路由的分组交换网</p>
+<p>分组交换的问题：时延与开销。</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.3-2.png" alt="img"></p>
+<p>电路交换适合于数据量很大的实时性传输。</p>
+<h2 id="计算机网络在我国的发展"><a href="#计算机网络在我国的发展" class="headerlink" title="计算机网络在我国的发展"></a>计算机网络在我国的发展</h2><p>中国1994年4月20日用一条64kbit/s专线正式连入互联网。</p>
+<p>事件：</p>
+<p>​    1996年张朝阳创立爱特信公司，推出”搜狐”</p>
+<p>​    1997年丁磊创立网易公司</p>
+<p>​    1998年王志东创立新浪网站</p>
+<p>​    1998年马化腾+张志东创立腾讯公司</p>
+<p>​    1999年马云创立阿里巴巴网站</p>
+<p>​    2000年李彦宏+徐勇创建百度网站</p>
+<h2 id="计算机网络的类别"><a href="#计算机网络的类别" class="headerlink" title="计算机网络的类别"></a>计算机网络的类别</h2><h3 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h3><p>目前较好的定义：计算机网络主要是由一些通用的、可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的。</p>
+<h3 id="几种不同类别的计算机网络"><a href="#几种不同类别的计算机网络" class="headerlink" title="几种不同类别的计算机网络"></a>几种不同类别的计算机网络</h3><p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.5-1.png" alt="img"></p>
+<h2 id="计算机网络的性能"><a href="#计算机网络的性能" class="headerlink" title="计算机网络的性能"></a>计算机网络的性能</h2><h3 id="计算机网络的性能指标"><a href="#计算机网络的性能指标" class="headerlink" title="计算机网络的性能指标"></a>计算机网络的性能指标</h3><h4 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h4><p>网络技术中的速率指的是数据的传送速率，也成为数据率(data rate)或比特率(bit rate)。单位是 bit/s(或 b/s ,有时也写为 bps，即 bit per second)。</p>
+<p>k = 10<sup>3</sup> = 千；M = 10<sup>6</sup> = 兆； G = 10<sup>9</sup> = 吉；T = 10<sup>12</sup> = 太；P = 10<sup>15</sup> = 拍；…</p>
+<p>网络的速率指额定速率或标称速率。</p>
+<h4 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h4><p>一条通信链路的”带宽”越宽，其所能传输的”最高数据率”越高。</p>
+<div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">意义1</a></li><li class="tab"><a href="#标签-2">意义2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>本来是指某个信号具有的频带宽度。这种意义下的带宽的单位是赫(或千赫、兆赫、吉赫等)。</p>
+<p>表示某信道允许通过的信号频带范围就成为该信道的带宽(或通频带)。</p></div><div class="tab-pane" id="标签-2"><p>在计算机网络中，带宽用来表示网络中某通道传送数据的能力，因此网络带宽表示在单位时间内网络中某信道所能通过的”最高数据率”。该意义下带宽单位是 bit/s。</p></div></div></div>
+
+
+
+<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>单位时间内通过某个网络(或信道、接口)的实际的数据量。</p>
+<p>受网络带宽或网络额定速率限制。</p>
+<h4 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h4><p>数据从网络(或链路)的一端传送到另一端所需的时间。有时也称为延迟或迟延。</p>
+<p>时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</p>
+<p>一条通信链路的”带宽”越宽，其所能传输的”最高数据率”越高。</p>
+<div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">发送时延</a></li><li class="tab"><a href="#标签-2">传播时延</a></li><li class="tab"><a href="#标签-3">处理时延</a></li><li class="tab"><a href="#标签-4">排队时延</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>主机或路由器发送数据帧所需要的时间。又称传输时延。<br>$$<br>发送时延 = \frac{数据帧长度(bit)}{发送速率(bit/s)}<br>$$</p></div><div class="tab-pane" id="标签-2"><p>电磁波在信道中传播一定距离需要花费的时间。<br>$$<br>传播时延 = \frac{信道长度(m)}{电磁波在信道上的传播速率(m/s)}<br>$$<br>1000km唱的光纤线路产生的传播时延大约为5ms。</p></div><div class="tab-pane" id="标签-3"><p>主机或路由器在收到分组时要花费一定时间进行处理从而产生的时延。</p></div><div class="tab-pane" id="标签-4"><p>分组在经过网络传输时，要经过许多路由器。但分组在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发。由此产生的时延。</p></div></div></div>
+
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-1.png" alt="img"></p>
+<h4 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h4><p>$$<br>时延带宽积 = 传播时延 * 带宽<br>$$</p>
+<p>链路的时延带宽积又称为以比特为单位的链路长度。</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-2.png" alt="img"></p>
+<h4 id="往返时间RTT"><a href="#往返时间RTT" class="headerlink" title="往返时间RTT"></a>往返时间RTT</h4><p>$$<br>发送时间 = \frac{数据长度}{发送速率}<br>$$</p>
+<p>$$<br>有效数据率 = \frac{数据长度}{发送时间 + RTT}<br>$$</p>
+<p>往返时间还包括中间结点处理时延、排队时延、转发数据的发送时延。</p>
+<h4 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h4><div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">信道利用率</a></li><li class="tab"><a href="#标签-2">网络利用率</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>信道利用率指出某信道有百分之几的时间是被利用的(有数据通过)。</p>
+<p>信道利用率并非越高越好：当某信道的利用率增大时，其引起的时延也迅速增加。</p></div><div class="tab-pane" id="标签-2"><p>网络利用率是全网络的信道利用率的加权平均值。</p></div></div></div>
+<p>$$<br>网络当前时延 = \frac{网络空闲时的时延}{1 - 网络的利用率}<br>$$<br><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.6-3.png" alt="img"></p>
+<h3 id="计算机网络的非性能特征"><a href="#计算机网络的非性能特征" class="headerlink" title="计算机网络的非性能特征"></a>计算机网络的非性能特征</h3><p>费用</p>
+<p>质量</p>
+<p>标准化</p>
+<p>可靠性</p>
+<p>可扩展性和可升级性</p>
+<p>易于管理和维护</p>
+<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><h3 id="计算机网络体系结构的形成"><a href="#计算机网络体系结构的形成" class="headerlink" title="计算机网络体系结构的形成"></a>计算机网络体系结构的形成</h3><h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议，简称协议。</p>
+<p>网络协议由三个要素组成：语法；语义；同步。</p>
+<p>分层结构好处：</p>
+<ol>
+<li>各层之间是独立的。</li>
+<li>灵活性好。</li>
+<li>结构上可分隔开。</li>
+<li>易于实现和维护。</li>
+<li>能促进标准化工作。</li>
+</ol>
+<p>各层要完成的功能：</p>
+<ol>
+<li>差错控制</li>
+<li>流量控制</li>
+<li>分段和重装</li>
+<li>复用和分用</li>
+<li>连接建立和释放</li>
+</ol>
+<p>计算机网络的体系结构就是这个计算机网络及其构件所应完成的功能的精确定义。</p>
+<h3 id="具有五层协议的体系结构"><a href="#具有五层协议的体系结构" class="headerlink" title="具有五层协议的体系结构"></a>具有五层协议的体系结构</h3><p>(五层协议的体系结构只是为介绍网络原理而设计，实际应用TCP/IP是四层体系结构)</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-1.png" alt="img"></p>
+<div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">应用层</a></li><li class="tab"><a href="#标签-2">运输层</a></li><li class="tab"><a href="#标签-3">网络层</a></li><li class="tab"><a href="#标签-4">数据链路层</a></li><li class="tab"><a href="#标签-5">物理层</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>(application layer)</p>
+<p>任务是通过应用进程间的交互来完成特定的网络应用。</p>
+<p>应用层协议定义的是应用进程间通信和交互的规则。</p>
+<p>应用层交互的数据单元成为报文(message)。</p></div><div class="tab-pane" id="标签-2"><p>(transport layer)</p>
+<p>任务是负责向两台主机中进程之间的通信提供通用的数据传输服务。</p>
+<p>运输层主要用两种协议：传输控制协议TCP与用户数据报协议UDP。</p>
+<div class="tabs" id="标签"><ul class="nav-tabs"><li class="tab active"><a href="#标签-1">传输控制协议</a></li><li class="tab"><a href="#标签-2">用户数据报协议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签-1"><p>(Transmission Control Protocol)</p>
+<p>提供面向连接的、可靠的数据传输服务，数据传输单位是报文段。</p></div><div class="tab-pane" id="标签-2"><p>(User Datagram Protocol)</p>
+<p>提供无连接的、尽最大努力的数据传输服务(不保证可靠性)，数据传输单位是用户数据报。</p></div></div></div></div><div class="tab-pane" id="标签-3"><p>(network layer)</p>
+<p>任务是为分组交换网上的不同主机提供通信服务。</p>
+<p>分组也被称为IP数据报，或简称数据报。</p>
+<p>网络层又称网际层或IP层。</p></div><div class="tab-pane" id="标签-4"><p>(data link layer)</p>
+<p>常简称为链路层。</p>
+<p>在两个相邻结点间传送数据时，数据链路层将网络层交下来的IP数据报组装成帧，再在链路上传送帧。</p></div><div class="tab-pane" id="标签-5"><p>物理层上所传数据的单位是比特。</p>
+<p>考虑多大电压代表”1”或”0”， 还要确定连接电缆的插头有多少根引脚以及引脚的连接方式。</p></div></div></div>
+
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-2.png" alt="img"></p>
+<h3 id="实体、协议、服务和服务访问点"><a href="#实体、协议、服务和服务访问点" class="headerlink" title="实体、协议、服务和服务访问点"></a>实体、协议、服务和服务访问点</h3><p>实体表示任何可发送或接收信息的硬件或软件进程。</p>
+<p>协议是控制两个对等实体(或多个实体)进行通信的规则的集合。</p>
+<p>在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务，要实现本层协议，还要使用下面一层所提供的的服务。</p>
+<p>在同一系统中相邻两层的实体进行交互的地方，同城成为服务访问点SAP。实际上是个逻辑接口。</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-3.png" alt="img"></p>
+<h3 id="TCP-TP的体系结构"><a href="#TCP-TP的体系结构" class="headerlink" title="TCP/TP的体系结构"></a>TCP/TP的体系结构</h3><p>TCP/IP可以为各式各样的应用提供服务</p>
+<p>TCP/IP允许IP协议在各式各样的网络构成的互联网上运行</p>
+<p><img src="../images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1.7-4.png" alt="img"></p>
+<h2 id="章节重要概念"><a href="#章节重要概念" class="headerlink" title="章节重要概念"></a>章节重要概念</h2><ol>
+<li>计算机网络(可简称为网络)把许多计算机连接在一起，而互连网则把许多网络连接在一起，是网络的网络。</li>
+<li>以小写字母i开始的internet(互连网)是通用名词，泛指由多个计算机网络互连而成的网络。在这些网络之间的通信协议可以是任意的。</li>
+<li>以大写字母I开始的Internet(互联网)是专用名词，指当前全球最大的、开放的、且由众多网络相互连接而成的特定互连网，采用TCP/IP协议族作为通信规则，前身是美国的ARPANET。</li>
+<li>互联网现在采用存储转发的分组交换技术，以及三层ISP结构。</li>
+<li>互联网按工作方式可划分为边缘部分与核心部分。主机在网络的边缘部分，其作用是信息处理。路由器在网络的核心部分，作用是按存储转发方式进行分组交换。</li>
+<li>计算机通信是计算机中的进程之间的通信。计算机网络采用的通信方式是客户-服务器方式和对等连接方式。</li>
+<li>客户和服务器都是指通信中所涉及的应用进程。客户是服务请求方，服务器是服务提供方。</li>
+<li>按作用范围的不同，计算机网络分为广域网WAN、城域网MAN、局域网LAN和个人区域网PAN。</li>
+<li>计算机网络最常用的性能指标是：速率、带宽、吞吐量、时延(发送时延、传播时延、处理时延、排队时延)、时延带宽积、往返时间和信道(或网络)利用率。</li>
+<li>网络协议即协议，是为进行网络中的数据交换而建立的规则。计算机网络的各层及其协议的集合，称为网络的体系结构。</li>
+<li>五层协议的体系结构由应用层、运输层、网络层(或网际层)、数据链路层和物理层组成。运输层最重要的协议是TCP和UDP协议，而网络层最重要的协议是IP协议。</li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/27/设计模式/" rel="next" title="设计模式">
+                <i class="fa fa-chevron-left"></i> 设计模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80NTMwNi8yMTgxOQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Snowakura">
+            
+              <p class="site-author-name" itemprop="name">Snowakura</p>
+              <div class="site-description motion-element" itemprop="description">这个博主太懒了,什么都没有写|•ω•`)</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+                <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+                <div class="widget-wrap">
+                  <h3 class="widget-title">Tag Cloud</h3>
+                  <div id="myCanvasContainer" class="widget tagcloud">
+                    <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li></ul>
+                    </canvas>
+                  </div>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nub3dha3VyYQ==" title="GitHub &rarr; https://github.com/Snowakura"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOjM0MDExNTIxMzBAcXEuY29t" title="E-Mail &rarr; mailto:3401152130@qq.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cDovL3dwYS5xcS5jb20vbXNncmQ/dj0zJnVpbj0zNDAxMTUyMTMwJnNpdGU9cXEmbWVudT15ZXM=" title="Tencent QQ &rarr; http://wpa.qq.com/msgrd?v=3&uin=3401152130&site=qq&menu=yes"><i class="fa fa-fw fa-qq"></i>Tencent QQ</span>
+                </span>
+              
+            </div>
+          
+
+          
+
+
+          
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络在信息时代中的作用"><span class="nav-number">1.</span> <span class="nav-text">计算机网络在信息时代中的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网概述"><span class="nav-number">2.</span> <span class="nav-text">互联网概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络的网络"><span class="nav-number">2.1.</span> <span class="nav-text">网络的网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网基础结构发展的三个阶段"><span class="nav-number">2.2.</span> <span class="nav-text">互联网基础结构发展的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的标准化工作"><span class="nav-number">2.3.</span> <span class="nav-text">互联网的标准化工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网的组成"><span class="nav-number">3.</span> <span class="nav-text">互联网的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的边缘部分"><span class="nav-number">3.1.</span> <span class="nav-text">互联网的边缘部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的核心部分"><span class="nav-number">3.2.</span> <span class="nav-text">互联网的核心部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络在我国的发展"><span class="nav-number">4.</span> <span class="nav-text">计算机网络在我国的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络的类别"><span class="nav-number">5.</span> <span class="nav-text">计算机网络的类别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的定义"><span class="nav-number">5.1.</span> <span class="nav-text">计算机网络的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几种不同类别的计算机网络"><span class="nav-number">5.2.</span> <span class="nav-text">几种不同类别的计算机网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络的性能"><span class="nav-number">6.</span> <span class="nav-text">计算机网络的性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的性能指标"><span class="nav-number">6.1.</span> <span class="nav-text">计算机网络的性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#速率"><span class="nav-number">6.1.1.</span> <span class="nav-text">速率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带宽"><span class="nav-number">6.1.2.</span> <span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#吞吐量"><span class="nav-number">6.1.3.</span> <span class="nav-text">吞吐量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时延"><span class="nav-number">6.1.4.</span> <span class="nav-text">时延</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时延带宽积"><span class="nav-number">6.1.5.</span> <span class="nav-text">时延带宽积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#往返时间RTT"><span class="nav-number">6.1.6.</span> <span class="nav-text">往返时间RTT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用率"><span class="nav-number">6.1.7.</span> <span class="nav-text">利用率</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的非性能特征"><span class="nav-number">6.2.</span> <span class="nav-text">计算机网络的非性能特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络体系结构"><span class="nav-number">7.</span> <span class="nav-text">计算机网络体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络体系结构的形成"><span class="nav-number">7.1.</span> <span class="nav-text">计算机网络体系结构的形成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协议与划分层次"><span class="nav-number">7.2.</span> <span class="nav-text">协议与划分层次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具有五层协议的体系结构"><span class="nav-number">7.3.</span> <span class="nav-text">具有五层协议的体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实体、协议、服务和服务访问点"><span class="nav-number">7.4.</span> <span class="nav-text">实体、协议、服务和服务访问点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-TP的体系结构"><span class="nav-number">7.5.</span> <span class="nav-text">TCP/TP的体系结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#章节重要概念"><span class="nav-number">8.</span> <span class="nav-text">章节重要概念</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-28</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Snowakura</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">8k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">13 分钟</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+
+  
+  <script src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+
+  
+    
+
+
+<script>
+  window.livereOptions = {
+    refer: '2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+<script>
+if ($('body').find('div.pdf').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      $('body').find('div.pdf').each(function(i, o) {
+        PDFObject.embed($(o).attr('target'), $(o), {
+          pdfOpenParams: {
+            navpanes: 0,
+            toolbar: 0,
+            statusbar: 0,
+            pagemode: 'thumbs',
+            view: 'FitH'
+          },
+          PDFJS_URL: '/lib/pdf/web/viewer.html',
+          height: $(o).attr('height') || '610px'
+        });
+      });
+    },
+  });
+}
+</script>
+
+
+  
+<script>
+if ($('body').find('pre.mermaid').length) {
+  $.ajax({
+    type: 'GET',
+    url: '//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js',
+    dataType: 'script',
+    cache: true,
+    success: function() {
+      mermaid.initialize({
+        theme: 'forest',
+        logLevel: 3,
+        flowchart: { curve: 'linear' },
+        gantt: { axisFormat: '%m/%d/%Y' },
+        sequence: { actorMargin: 50 }
+      });
+    }
+  });
+}
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":50},"mobile":{"show":true,"react":null,"opacityDefault":0.3,"opacityOnHover":0.3},"log":false});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+  <!-- 雪花特效 -->
+<script type="text/javascript">
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
+</script>
