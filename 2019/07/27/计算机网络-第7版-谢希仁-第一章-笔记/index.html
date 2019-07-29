@@ -108,7 +108,7 @@
 <meta name="keywords" content="计算机网络,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络(第7版)谢希仁-第一章-笔记">
-<meta property="og:url" content="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/index.html">
 <meta property="og:site_name" content="樱落成雪的博客">
 <meta property="og:description" content="本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机网络的性能指标。 计算机网络分层次的体系结构，包含协议和服务的概念。">
 <meta property="og:locale" content="zh-CN">
@@ -126,7 +126,9 @@
 <meta property="og:image" content="http://yoursite.com/images/计算机网络/1.7-2.png">
 <meta property="og:image" content="http://yoursite.com/images/计算机网络/1.7-3.png">
 <meta property="og:image" content="http://yoursite.com/images/计算机网络/1.7-4.png">
-<meta property="og:updated_time" content="2019-07-28T10:51:46.632Z">
+<meta property="og:image" content="http://yoursite.com/images/计算机网络/1.7-5.png">
+<meta property="og:image" content="http://yoursite.com/images/计算机网络/1.7-6.png">
+<meta property="og:updated_time" content="2019-07-29T11:12:26.134Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络(第7版)谢希仁-第一章-笔记">
 <meta name="twitter:description" content="本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机网络的性能指标。 计算机网络分层次的体系结构，包含协议和服务的概念。">
@@ -138,7 +140,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/">
 
 
 
@@ -331,11 +333,40 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -381,7 +412,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Snowakura">
@@ -439,7 +470,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-28 18:51:46" itemprop="dateModified" datetime="2019-07-28T18:51:46+08:00">2019-07-28</time>
+                <time title="修改时间：2019-07-29 19:12:26" itemprop="dateModified" datetime="2019-07-29T19:12:26+08:00">2019-07-29</time>
               </span>
             
           
@@ -482,7 +513,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">4.6k</span>
+              <span title="本文字数">4.9k</span>
             </span>
           
 
@@ -649,7 +680,30 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p>可靠性</p>
 <p>可扩展性和可升级性</p>
 <p>易于管理和维护</p>
-<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><h3 id="计算机网络体系结构的形成"><a href="#计算机网络体系结构的形成" class="headerlink" title="计算机网络体系结构的形成"></a>计算机网络体系结构的形成</h3><h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议，简称协议。</p>
+<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+
+<h3 id="计算机网络体系结构的形成"><a href="#计算机网络体系结构的形成" class="headerlink" title="计算机网络体系结构的形成"></a>计算机网络体系结构的形成</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">拓展，根据韩立刚老师计算机网络课程补充知识</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p>OSI参考模型分7层</p>
+<p>(程序开发人员考虑问题↓)</p>
+<p>应用层。能够产生网络流量和用户交互的应用程序。</p>
+<p>表示层。数据的加密，压缩，编码等。</p>
+<p>会话层。服务和客户端建立的会话。</p>
+<p>(网络工程师↓)</p>
+<p>传输层。可靠传输(建立会话)，不可靠传输(不建立会话)，流量控制。</p>
+<p>网络层。选择最佳路径，IP地址编址。</p>
+<p>数据链路层。数据如何封装，添加物理层地址(MAC地址)。</p>
+<p>(标准化设备↓)</p>
+<p>物理层。电压，接口标准。</p>
+<hr>
+<p>网络排错：低层往高层逐一排查。</p>
+<p>网络安全和OSI参考模型：</p>
+<p>​    物理层安全。</p>
+<p>​    数据链路层安全。</p>
+<p>​    网络层安全。</p>
+<p>​    应用层安全。</p></div></div></div>
+
+
+
+<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议，简称协议。</p>
 <p>网络协议由三个要素组成：语法；语义；同步。</p>
 <p>分层结构好处：</p>
 <ol>
@@ -669,7 +723,9 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 </ol>
 <p>计算机网络的体系结构就是这个计算机网络及其构件所应完成的功能的精确定义。</p>
 <h3 id="具有五层协议的体系结构"><a href="#具有五层协议的体系结构" class="headerlink" title="具有五层协议的体系结构"></a>具有五层协议的体系结构</h3><p>(五层协议的体系结构只是为介绍网络原理而设计，实际应用TCP/IP是四层体系结构)</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
 
 
 
@@ -689,7 +745,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p>在两个相邻结点间传送数据时，数据链路层将网络层交下来的IP数据报组装成帧，再在链路上传送帧。</p></div><div class="tab-pane" id="tags-5"><p>物理层上所传数据的单位是比特。</p>
 <p>考虑多大电压代表”1”或”0”， 还要确定连接电缆的插头有多少根引脚以及引脚的连接方式。</p></div></div></div>
 
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-4.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
 
 
 
@@ -697,13 +753,13 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p>协议是控制两个对等实体(或多个实体)进行通信的规则的集合。</p>
 <p>在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务，要实现本层协议，还要使用下面一层所提供的的服务。</p>
 <p>在同一系统中相邻两层的实体进行交互的地方，同城成为服务访问点SAP。实际上是个逻辑接口。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-5.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
 
 
 
 <h3 id="TCP-TP的体系结构"><a href="#TCP-TP的体系结构" class="headerlink" title="TCP/TP的体系结构"></a>TCP/TP的体系结构</h3><p>TCP/IP可以为各式各样的应用提供服务</p>
 <p>TCP/IP允许IP协议在各式各样的网络构成的互联网上运行</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-4.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-6.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
 
 
 
@@ -733,6 +789,44 @@ WIDGET = {FID: 'xOIWAfdIEd'}
     
     
     
+
+    <div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>计算机网络(第7版)谢希仁-第一章-笔记</p>
+  <p><span>文章作者:</span>Snowakura</p>
+  <p><span>发布时间:</span>2019年07月27日 - 16:34:08</p>
+  <p><span>最后更新:</span>2019年07月29日 - 19:12:26</p>
+  <p><span>原始链接:</span><a href="/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/" title="计算机网络(第7版)谢希仁-第一章-笔记">http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+    
+    </div>
 
     
 
@@ -836,7 +930,9 @@ WIDGET = {FID: 'xOIWAfdIEd'}
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Snowakura">
+              <a href="/">
+                <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Snowakura">
+              </a>
             
               <p class="site-author-name" itemprop="name">Snowakura</p>
               <div class="site-description motion-element" itemprop="description">这个博主太懒了,什么都没有写|•ω•`)</div>
@@ -852,19 +948,6 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                     <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
-                </div>
-              
-
-              
-                <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-                <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-                <div class="widget-wrap">
-                  <h3 class="widget-title">Tag Cloud</h3>
-                  <div id="myCanvasContainer" class="widget tagcloud">
-                    <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">1</span></li></ul>
-                    </canvas>
-                  </div>
                 </div>
               
 
@@ -989,6 +1072,21 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
       
 
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+          <h3 class="widget-title"></h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+        </div>
+      
+
+
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -1002,7 +1100,8 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <div class="footer-inner">
         
 
-<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-28</span>
+
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-29</span>
   <span class="with-love" id="animate">
     <i class="fa fa-snowflake-o"></i>
   </span>
@@ -1014,7 +1113,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">9k</span>
   
 
   
@@ -1036,6 +1135,40 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 
 
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("07/12/2019 12:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站在各种错误下已勉强存活 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 (;*´Д`)ノ"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1166,7 +1299,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 <script>
   window.livereOptions = {
-    refer: '2019/07/27/计算机网络-第7版-谢希仁-第一章笔记/'
+    refer: '2019/07/27/计算机网络-第7版-谢希仁-第一章-笔记/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
@@ -1182,6 +1315,326 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -1253,6 +1706,17 @@ if ($('body').find('pre.mermaid').length) {
   
 
   
+  
+  
+    
+  
+  <script src="true"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
 
   
 
@@ -1261,8 +1725,8 @@ if ($('body').find('pre.mermaid').length) {
 
   
   
-
-
+  
+  
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":50},"mobile":{"show":true,"react":null,"opacityDefault":0.3,"opacityOnHover":0.3},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->

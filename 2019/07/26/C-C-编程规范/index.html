@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="樱落成雪的博客">
 <meta property="og:description" content="文件结构&amp;#160; &amp;#160; &amp;#160; &amp;#160;每个C/C++程序通常分两个文件：一个是用于保存程序的声明，称为头文件，以”.h“为后缀；另一个是保存程序的实现，称为定义，通常以”.cpp“为后缀(个别系统以”.cc“或”.cxx“为后缀；C程序以”.c“为后缀)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-28T10:51:08.789Z">
+<meta property="og:updated_time" content="2019-07-29T12:39:24.058Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++编程规范">
 <meta name="twitter:description" content="文件结构&amp;#160; &amp;#160; &amp;#160; &amp;#160;每个C/C++程序通常分两个文件：一个是用于保存程序的声明，称为头文件，以”.h“为后缀；另一个是保存程序的实现，称为定义，通常以”.cpp“为后缀(个别系统以”.cc“或”.cxx“为后缀；C程序以”.c“为后缀)。">
@@ -316,11 +316,40 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -424,7 +453,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-28 18:51:08" itemprop="dateModified" datetime="2019-07-28T18:51:08+08:00">2019-07-28</time>
+                <time title="修改时间：2019-07-29 20:39:24" itemprop="dateModified" datetime="2019-07-29T20:39:24+08:00">2019-07-29</time>
               </span>
             
           
@@ -532,18 +561,18 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p>如果部分文件为私有文件，则可以将其存放于另外的同一个目录下。</p>
 <h2 id="程序版式"><a href="#程序版式" class="headerlink" title="程序版式"></a>程序版式</h2><h3 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">在每个类声明、函数定义结束之后都要加空行</font></p>
 <p><font color="#66ccff">在一个函数体内，逻辑上密切相关的语句之间不加空行，其他地方加空行分隔</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void Function1()</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Function2()</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Function1</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Function2</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">while (condition)</span><br><span class="line">&#123;</span><br><span class="line">    statement-listA;</span><br><span class="line"></span><br><span class="line">​    if (condition)</span><br><span class="line">​    &#123;</span><br><span class="line">​        statement-listB;</span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">​    statement-listC;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">while</span> (condition)</span><br><span class="line">&#123;</span><br><span class="line">    statement-listA;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">if</span> (condition)</span><br><span class="line">​    &#123;</span><br><span class="line">​        statement-listB;</span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">​    statement-listC;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
 <h3 id="代码行"><a href="#代码行" class="headerlink" title="代码行"></a>代码行</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">规则</a></li><li class="tab"><a href="#tags-2">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">一行代码只做一件事情，只定义一个变量或只写一条语句</font></p>
 <p><font color="#66ccff">if, for, while, do 等语句自占一行，执行语句加{}防止书写失误</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int a = 1;</span><br><span class="line">int b = 2;</span><br><span class="line"></span><br><span class="line">while (a &lt; 5)</span><br><span class="line">&#123;</span><br><span class="line">    a += b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tags-2"><p><font color="#66ccff">尽可能在定义变量的同时初始化该变量</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int a = 1;</span><br><span class="line">int b = 2;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int a = <span class="number">1</span><span class="comment">;</span></span><br><span class="line">int <span class="keyword">b </span>= <span class="number">2</span><span class="comment">;</span></span><br><span class="line"></span><br><span class="line">while (a &lt; <span class="number">5</span>)</span><br><span class="line">&#123;</span><br><span class="line">    a += <span class="keyword">b;</span></span><br><span class="line"><span class="keyword">&#125;</span></span><br><span class="line"><span class="keyword"></span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tags-2"><p><font color="#66ccff">尽可能在定义变量的同时初始化该变量</font></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attribute">int a</span> = 1;</span><br><span class="line"><span class="attribute">int b</span> = 2;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
@@ -551,25 +580,25 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p><font color="#66ccff">‘(’ 向后紧跟， ‘)’  ’,‘  ’;’ 向前进跟，紧跟不留空格</font></p>
 <p><font color="#66ccff">‘,’ 之后要留空格，如果 ‘;’ 不是一行的结束则后留空格</font></p>
 <p><font color="#66ccff">二元操作符前后加空格，一元操作符前后不加空格，’[]’  ‘.’  ‘-&gt;’ 前后不加空格</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void Function1(int x, int y, int z);</span><br><span class="line">for (i = 0; i &lt;= 5; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ch[i] += p-&gt;val;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tags-2"><p><font color="#66ccff">对于表达式比较长的for语句和if语句，为了紧凑起见可以适当去掉一些空格</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">for (i = 0; i&lt;10 &amp;&amp; i&gt;5; i++)</span><br><span class="line">&#123;</span><br><span class="line">    statement-list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Function1</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span></span>;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt;= <span class="number">5</span>; i++)</span><br><span class="line">&#123;</span><br><span class="line">    ch[i] += p-&gt;val;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tags-2"><p><font color="#66ccff">对于表达式比较长的for语句和if语句，为了紧凑起见可以适当去掉一些空格</font></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">i</span> = <span class="number">0</span>; <span class="built_in">i</span>&lt;<span class="number">10</span> &amp;&amp; <span class="built_in">i</span>&gt;<span class="number">5</span>; <span class="built_in">i</span>++)</span><br><span class="line">&#123;</span><br><span class="line">    statement-list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
 <h3 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">程序分界符 ‘{}’ 应该独占一行且位于同一列，同时与引用他们的语句左对齐</font></p>
 <p><font color="#66ccff">‘{}’ 之内的代码块在 ‘{‘ 右边数格处左对齐</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void Function()</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if (condition)</span><br><span class="line">&#123;</span><br><span class="line">    statement-list;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void <span class="function"><span class="keyword">Function</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (condition)</span><br><span class="line">&#123;</span><br><span class="line">    statement-<span class="keyword">list</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
 <h3 id="长行拆分"><a href="#长行拆分" class="headerlink" title="长行拆分"></a>长行拆分</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">代码行最大长度应控制在70~80个字符之内，不宜过长</font></p>
 <p><font color="#66ccff">长表达式在低优先级操作符处拆分成新行，操作符放在新行之首，拆分出新行应适当缩进</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void Function(Long_ElemType Long_ElemType_a)</span><br><span class="line">&#123;</span><br><span class="line">    Long_ElemType Long_ElemType_b = 2;</span><br><span class="line">    for (Long_ElemType_b; </span><br><span class="line">        Long_ElemType_b * Long_ElemType_a &lt; 10; </span><br><span class="line">        Long_ElemType_b++)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">​        statement-list;</span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void <span class="function"><span class="keyword">Function</span><span class="params">(Long_ElemType Long_ElemType_a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Long_ElemType Long_ElemType_b = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span> (Long_ElemType_b; </span><br><span class="line">        Long_ElemType_b * Long_ElemType_a &lt; <span class="number">10</span>; </span><br><span class="line">        Long_ElemType_b++)</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">​        statement-<span class="keyword">list</span>;</span><br><span class="line">​    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
 <h3 id="修饰符的位置"><a href="#修饰符的位置" class="headerlink" title="修饰符的位置"></a>修饰符的位置</h3><div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">修饰符 ‘*’ 和 ‘&amp;’ 紧靠变量名</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int a = 1;</span><br><span class="line">int *p = &amp;a;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> *p = &amp;a;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
@@ -588,7 +617,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 <p>​    1.将private类型的数据写在前面，将public类型的函数写在后面。该类主张类的设计“以数据为中心”，重点关注类的内部结构。</p>
 <p>​    2.将public类型的函数写在前面，将private类型的数据写在后面。该类主张类的设计”以行为为中心“，重点关注类提供什么接口。</p>
 <div class="tabs" id="tags"><ul class="nav-tabs"><li class="tab active"><a href="#tags-1">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tags-1"><p><font color="#66ccff">建议采用“以行为为中心”的书写方式，即首先考虑类应该提供什么样的函数，这样做不仅让自己在设计类时思路清晰，而且方便别人阅读。</font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">class class-name</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">        public-member1;</span><br><span class="line">        public-member2;</span><br><span class="line">    private:</span><br><span class="line">        private-member1;</span><br><span class="line">        private-member2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="keyword">class</span>-<span class="keyword">name</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">        <span class="keyword">public</span>-member1;</span><br><span class="line">        <span class="keyword">public</span>-member2;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">private</span>-member1;</span><br><span class="line">        <span class="keyword">private</span>-member2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div></div></div>
 
 
 
@@ -605,6 +634,44 @@ WIDGET = {FID: 'xOIWAfdIEd'}
     
     
     
+
+    <div>
+    
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>C/C++编程规范</p>
+  <p><span>文章作者:</span>Snowakura</p>
+  <p><span>发布时间:</span>2019年07月26日 - 22:04:11</p>
+  <p><span>最后更新:</span>2019年07月29日 - 20:39:24</p>
+  <p><span>原始链接:</span><a href="/2019/07/26/C-C-编程规范/" title="C/C++编程规范">http://yoursite.com/2019/07/26/C-C-编程规范/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/26/C-C-编程规范/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+    
+    </div>
 
     
 
@@ -714,7 +781,9 @@ WIDGET = {FID: 'xOIWAfdIEd'}
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Snowakura">
+              <a href="/">
+                <img class="site-author-image" itemprop="image" src="/uploads/avatar.png" alt="Snowakura">
+              </a>
             
               <p class="site-author-name" itemprop="name">Snowakura</p>
               <div class="site-description motion-element" itemprop="description">这个博主太懒了,什么都没有写|•ω•`)</div>
@@ -730,19 +799,6 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                     <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
-                </div>
-              
-
-              
-                <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
-                <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
-                <div class="widget-wrap">
-                  <h3 class="widget-title">Tag Cloud</h3>
-                  <div id="myCanvasContainer" class="widget tagcloud">
-                    <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">1</span></li></ul>
-                    </canvas>
-                  </div>
                 </div>
               
 
@@ -867,6 +923,21 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
       
 
+
+      
+        <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+        <div class="widget-wrap">
+          <h3 class="widget-title"></h3>
+          <div id="myCanvasContainer" class="widget tagcloud">
+              <canvas width="250" height="250" id="resCanvas" style="width=100%">
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">1</span></li></ul>
+              </canvas>
+          </div>
+        </div>
+      
+
+
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -880,7 +951,8 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <div class="footer-inner">
         
 
-<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-28</span>
+
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-29</span>
   <span class="with-love" id="animate">
     <i class="fa fa-snowflake-o"></i>
   </span>
@@ -892,7 +964,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">9k</span>
   
 
   
@@ -914,6 +986,40 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 
 
+
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("07/12/2019 12:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站在各种错误下已勉强存活 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒 (;*´Д`)ノ"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1060,6 +1166,326 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -1131,6 +1557,17 @@ if ($('body').find('pre.mermaid').length) {
   
 
   
+  
+  
+    
+  
+  <script src="true"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
 
   
 
@@ -1139,8 +1576,8 @@ if ($('body').find('pre.mermaid').length) {
 
   
   
-
-
+  
+  
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":50},"mobile":{"show":true,"react":null,"opacityDefault":0.3,"opacityOnHover":0.3},"log":false});</script></body>
 </html>
 <!-- 页面点击小红心 -->
