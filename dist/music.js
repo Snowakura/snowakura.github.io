@@ -28,6 +28,14 @@ const ap = new APlayer({
       },
 
       {
+        name: "ゼロセンチメートル",
+        artist: '大原ゆい子',
+        url: 'https://snowakura.github.io/music/ゼロセンチメートル - 大原ゆい子.mp3',
+        cover: 'http://p2.music.126.net/vdchdw81BuNTo265UuVOtA==/109951164200576586.jpg?param=130y130',
+        lrc: 'https://snowakura.github.io/music/ゼロセンチメートル - 大原ゆい子.lrc',
+      },
+
+      {
         name: "洛天依",
         artist: '嘘つきは恋のはじまり',
         url: 'https://snowakura.github.io/music/洛天依 - 嘘つきは恋のはじまり.mp3',
