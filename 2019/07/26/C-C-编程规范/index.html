@@ -112,7 +112,7 @@
 <meta property="og:site_name" content="樱落成雪的博客">
 <meta property="og:description" content="文件结构&amp;#160; &amp;#160; &amp;#160; &amp;#160;每个C/C++程序通常分两个文件：一个是用于保存程序的声明，称为头文件，以”.h“为后缀；另一个是保存程序的实现，称为定义，通常以”.cpp“为后缀(个别系统以”.cc“或”.cxx“为后缀；C程序以”.c“为后缀)。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-30T15:58:21.461Z">
+<meta property="og:updated_time" content="2019-08-20T12:10:12.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C&#x2F;C++编程规范">
 <meta name="twitter:description" content="文件结构&amp;#160; &amp;#160; &amp;#160; &amp;#160;每个C/C++程序通常分两个文件：一个是用于保存程序的声明，称为头文件，以”.h“为后缀；另一个是保存程序的实现，称为定义，通常以”.cpp“为后缀(个别系统以”.cc“或”.cxx“为后缀；C程序以”.c“为后缀)。">
@@ -274,7 +274,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">4</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">5</span></a>
 
   </li>
         
@@ -292,7 +292,7 @@
       
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">3</span></a>
 
   </li>
         
@@ -310,7 +310,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">7</span></a>
 
   </li>
 
@@ -453,7 +453,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-07-30 23:58:21" itemprop="dateModified" datetime="2019-07-30T23:58:21+08:00">2019-07-30</time>
+                <time title="修改时间：2019-08-20 20:10:12" itemprop="dateModified" datetime="2019-08-20T20:10:12+08:00">2019-08-20</time>
               </span>
             
           
@@ -496,7 +496,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
               
                 <span class="post-meta-item-text">本文字数：</span>
               
-              <span title="本文字数">6.2k</span>
+              <span title="本文字数">11k</span>
             </span>
           
 
@@ -508,7 +508,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
               
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
               
-              <span title="阅读时长">10 分钟</span>
+              <span title="阅读时长">19 分钟</span>
             </span>
           
 
@@ -715,7 +715,170 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
 <font color="#66ccff">2.最后加default分支，既是不需要default处理，也要在default后加break。</font></div></div></div>
 <h3 id="goto-语句"><a href="#goto-语句" class="headerlink" title="goto 语句"></a>goto 语句</h3><p><strong>少用慎用尽量不用</strong></p>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2>
+<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><h3 id="const与-define的比较"><a href="#const与-define的比较" class="headerlink" title="const与#define的比较"></a>const与#define的比较</h3><p>C++可以定义const常量(const)，也可以定义宏常量(#define)，优缺点：</p>
+<ol>
+<li>const常量有数据类型， 宏常量没有数据类型。编译器对const可以进行类型安全检查，而对#define只进行字符替换，并没有类型安全检查，并且字符替换可能会产生意料不到的错误(边际效应)。</li>
+<li>有些IDE可以对const常量进行调试，但不能对宏常量进行调试。</li>
+</ol>
+<div class="tabs" id="const与#define的比较"><ul class="nav-tabs"><li class="tab active"><a href="#const与#define的比较-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="const与#define的比较-1"><font color="#66ccff">1.尽量使用含义直观的常量来表示那些将在程序中多次出现的数字或字符串。</font><br>
+
+<font color="#66ccff">2.在C++程序中只使用const常量而不使用宏常量。</font></div></div></div>
+<h3 id="常量定义规则"><a href="#常量定义规则" class="headerlink" title="常量定义规则"></a>常量定义规则</h3><div class="tabs" id="常量定义规则"><ul class="nav-tabs"><li class="tab active"><a href="#常量定义规则-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="常量定义规则-1"><font color="#66ccff">1.需要对外公开的常量放在头文件中，不需要对外公开的常量放在定义文件的头部。为便于管理，可以把不同模块的常量集中存放在一个公共的头文件中。</font><br>
+
+<font color="#66ccff">2.如果某一常量与其它常量密切相关，应在定义中包含这种关系，而不应给出一些孤立的值。</font>
+
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const float<span class="built_in"> RADIUS </span>= 100;</span><br><span class="line">const float DIAMETER =<span class="built_in"> RADIUS </span><span class="number">*2</span>;</span><br></pre></td></tr></table></figure></div></div></div>
+<h2 id="函数设计"><a href="#函数设计" class="headerlink" title="函数设计"></a>函数设计</h2><p>一个函数的注释信息如下例：</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="markdown">/<span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="emphasis">***</span>*</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet">* 	</span>Function:  calculate The area of rectangle		*</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet">*       </span>parameter:  </span>the<span class="markdown"> Length and Width of rectangle		*</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet">*	  </span>outout:  </span>the<span class="markdown"> area of rectangle			*</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span><span class="strong">*****</span>/</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">	…………</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">Error:</span></span><br><span class="line"><span class="comment">	1.描述在单元测试中出现的错误</span></span><br><span class="line"><span class="comment">	2.…………</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<h3 id="参数的规则"><a href="#参数的规则" class="headerlink" title="参数的规则"></a>参数的规则</h3><div class="tabs" id="参数的规则"><ul class="nav-tabs"><li class="tab active"><a href="#参数的规则-1">规则</a></li><li class="tab"><a href="#参数的规则-2">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="参数的规则-1"><font color="#66ccff">1.参数的书写要完整，不要贪图省事只写参数的类型而省略参数名字。如果函数没有参数，则用void填充。</font>
+
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 良好的风格</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SetValue</span><span class="params">(<span class="keyword">int</span> height, <span class="keyword">int</span> width)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">GetValue</span><span class="params">(<span class="keyword">void</span>)</span></span>;</span><br><span class="line"><span class="comment">// 不好的风格</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SetValue</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">GetValue</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<font color="#66ccff">2.参数命名要恰当，顺序要合理。</font>(参数名字最好带有意义，另外将目的参数放在前面，源参数放在后面)<br>
+
+<font color="#66ccff">3.如果参数是指针，且仅作输入用，则应在类型前加const，以防止该指针在函数体内被意外修改。</font><br>
+
+<font color="#66ccff">4.如果输入参数以值传递的方式传递对象，则宜改用"const&"方式来传递，这样可以省去临时对象的构造和析构过程，提高效率。</font><br>
+
+<font color="#66ccff">5.参数缺省值只能出现在函数的声明中，而不能出现在定义体中。</font><br>
+
+<font color="#66ccff">6.如果函数有太多的参数，参数只能从后向前依次缺省。</font></div><div class="tab-pane" id="参数的规则-2"><p><font color="#66ccff">1.避免函数有太多的参数，参数个数尽量控制在5个以内。参数过多容易记错。</font>&lt;/br&gt;</p>
+<p><font color="#66ccff">1.尽量不要使用类型和数目不确定的参数。</font>&lt;/br&gt;</p></div></div></div>
+<h3 id="返回值的规则"><a href="#返回值的规则" class="headerlink" title="返回值的规则"></a>返回值的规则</h3><div class="tabs" id="返回值的规则"><ul class="nav-tabs"><li class="tab active"><a href="#返回值的规则-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="返回值的规则-1"><font color="#66ccff">1.不要省略返回值的类型，没有应声明为void类型。</font><br>
+
+<font color="#66ccff">2.函数名字与返回值类型在语义上不可冲突。</font><br>
+
+<font color="#66ccff">3.不要将正常值和错误标志混在一起返回。正常值用输出参数获得，而错误标志用return语句返回。</font><br>
+
+<font color="#66ccff">4.给以"指针传递"方式的函数返回值加const修饰，那么函数返回值(即指针)的内容不能被修改，该返回值只能被赋给加const修饰的同类型指针。</font><br>
+
+<font color="#66ccff">5.函数返回值采用"值传递方式"，由于函数会把返回值复制到外部临时的存储单元中，加const修饰没有任何价值。</font><br>
+
+<font color="#66ccff">6.函数返回值采用"引用传递"的场合并不多，这种方式一般只出现在类的赋值函数中，目的是为了实现链式表达。</font></div></div></div>
+<h3 id="函数内部实现的规则"><a href="#函数内部实现的规则" class="headerlink" title="函数内部实现的规则"></a>函数内部实现的规则</h3><div class="tabs" id="函数内部实现的规则"><ul class="nav-tabs"><li class="tab active"><a href="#函数内部实现的规则-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="函数内部实现的规则-1"><font color="#66ccff">1.在函数体的"入口处"，对参数的有效性进行检查。</font><br>
+
+<font color="#66ccff">2.在函数体的"出口处"，对return语句的正确性和效率进行检查。</font>
+
+<blockquote>
+<ol>
+<li>return语句不可返回指向”栈内存”的”指针”或者”引用”，因为该内存在函数体结束时被自动销毁。<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * Func(<span class="keyword">void</span>)</span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">char</span> <span class="keyword">str</span>[] = <span class="string">"hello world"</span>;    <span class="comment">// str 的内存位于栈上</span></span><br><span class="line">     ……</span><br><span class="line">     <span class="keyword">return</span> <span class="keyword">str</span>;    <span class="comment">// 将导致错误</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>要搞清楚返回的究竟是”值”、”指针”还是”引用”。</li>
+<li>如果函数返回值是一个对象，要考虑return 语句的效率。</li>
+</ol>
+</blockquote></div></div></div>
+<h3 id="其他建议"><a href="#其他建议" class="headerlink" title="其他建议"></a>其他建议</h3><div class="tabs" id="6.4其他建议"><ul class="nav-tabs"><li class="tab active"><a href="#6.4其他建议-1">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="6.4其他建议-1"><font color="#66ccff">1.函数的功能要单一，不要设计多用途的函数。</font><br>
+
+<font color="#66ccff">2.函数体的规模要小，尽量控制在50行代码之内。</font><br>
+
+<font color="#66ccff">3.尽量避免函数带有"记忆"功能。相同的输入应当产生相同的输出。在C/C++中函数的static局部变量是函数的"记忆"存储器，建议尽量少用static局部变量，除非必需。</font><br>
+
+<font color="#66ccff">4.不仅要检查输入参数的有效性，还要检查通过其他途径进入函数体内的变量的有效性，例如全局变量，文件句柄等。</font><br>
+
+<font color="#66ccff">5.用于出错处理的返回值一定要搞清楚，让使用者不容易忽视或误解错误情况。</font></div></div></div>
+<h3 id="使用断言"><a href="#使用断言" class="headerlink" title="使用断言"></a>使用断言</h3><blockquote>
+<p>&#160; &#160; &#160; &#160;程序一般分为Debug 版本和Release 版本，Debug 版本用于内部调试，Release 版本发行给用户使用。<br>&#160; &#160; &#160; &#160;断言assert 是仅在Debug 版本起作用的宏，它用于检查“不应该”发生的情况。在运行过程中，如果assert 的参数为假，那么程序就会中止（一般地还会出现提示对话，说明在什么地方引发了assert）。<br>&#160; &#160; &#160; &#160;assert 不是一个仓促拼凑起来的宏。为了不在程序的Debug 版本和Release 版本引起差别，assert不应该产生任何副作用。所以assert 不是函数，而是宏。程序员可以把assert 看成一个在任何系统状态下都可以安全使用的无害测试手段。如果程序在assert处终止了，并不是说含有该assert 的函数有错误，而是调用者出了差错，assert 可以帮助我们找到发生错误的原因。</p>
+<p>——引用自原文件</p>
+</blockquote>
+<div class="tabs" id="使用断言"><ul class="nav-tabs"><li class="tab active"><a href="#使用断言-1">规则</a></li><li class="tab"><a href="#使用断言-2">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="使用断言-1"><font color="#66ccff">1.使用断言捕捉不应该发生的非法情况，不要混淆非法情况与错误情况之间的区别，后者是必然存在的而且是一定要作出处理的。</font><br>
+
+<font color="#66ccff">2.在函数的入口处，使用断言检查参数的有效性(合法性)。</font></div><div class="tab-pane" id="使用断言-2"><font color="#66ccff">1.在编写函数时，要进行反复的考查，并且自问："我打算做哪些假定?"。一旦确定了的假定，就要使用断言对假定进行检查。</font><br>
+
+<font color="#66ccff">2.当进行防错设计时，如果"不可能发生"的事情的确发生了，则要使用断言进行报警。</font></div></div></div>
+<h3 id="引用与指针的比较"><a href="#引用与指针的比较" class="headerlink" title="引用与指针的比较"></a>引用与指针的比较</h3><p>引用的规则：</p>
+<ol>
+<li>引用被创建的同时必须被初始化，指针则可以在任何时候被初始化。</li>
+<li>不能用NULL 引用，引用必须与合法的存储单元关联，但指针可以是NULL。</li>
+<li>一旦引用被初始化，就不能改变引用的关系，指针则可以随时改变所指的对象。</li>
+</ol>
+<h2 id="重载和内联"><a href="#重载和内联" class="headerlink" title="重载和内联"></a>重载和内联</h2><h3 id="普通函数重载"><a href="#普通函数重载" class="headerlink" title="普通函数重载"></a>普通函数重载</h3><div class="tabs" id="普通函数重载"><ul class="nav-tabs"><li class="tab active"><a href="#普通函数重载-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="普通函数重载-1"><font color="#66ccff">1.重载函数中的参数不同(包括类型、顺序不同)，才是重载函数，而仅仅返回值不同则不行。</font><br>
+
+<font color="#66ccff">2.当心隐式类型转换导致重载函数产生二义性，数字本身没有类型，将数字当做参数时将自动进行类型转换(成为隐式类型转换)。</font></div></div></div>
+<h3 id="成员函数的重载覆盖与隐藏"><a href="#成员函数的重载覆盖与隐藏" class="headerlink" title="成员函数的重载覆盖与隐藏"></a>成员函数的重载覆盖与隐藏</h3><div class="tabs" id="成员函数的重载覆盖与隐藏"><ul class="nav-tabs"><li class="tab active"><a href="#成员函数的重载覆盖与隐藏-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="成员函数的重载覆盖与隐藏-1"><font color="#66ccff">1.成员函数的重载、覆盖与隐藏很容易混淆，注意区分。</font><br>
+
+<font color="#66ccff">2.注意如果派生类的函数与基类的函数同名，但是参数不同。此时，无论有无virtual关键字，基类的函数将被隐藏(注意别与重载混淆)。</font><br>
+
+<font color="#66ccff">3.注意如果派生类的函数与基类的函数同名，并且参数也相同，但是基类函数没有virtual关键字。此时，基类的函数被隐藏(注意别与覆盖混淆)。</font></div></div></div>
+<h3 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h3><div class="tabs" id="内联函数"><ul class="nav-tabs"><li class="tab active"><a href="#内联函数-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="内联函数-1"><font color="#66ccff">1.尽量用内联取代宏代码，提高函数的执行效率(速度)。</font><br>
+
+<font color="#66ccff">2.关键字inline必须与函数定义体放在一起才能使函数成为内联，仅将inline放在函数声明前面不起任何作用。</font><br>
+
+<font color="#66ccff">3.如果函数体内的代码比较长或函数体内出现循环，则不宜使用内联。</font></div></div></div>
+<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><p>内存分配方式分三种：</p>
+<ol>
+<li>从静态存储区域分配。内存在程序编译的时候就已经分配好，这块内存在程序的整个运行期间都存在，例如全局变量，static变量。</li>
+<li>在栈上创建。在执行函数时，函数内局部变量的存储单元都可以在栈上创建，函数执行结束时这些存储单元自动被释放。栈内存分配运算内置于处理器的指令集中，效率很高，但分配的内存容量有限。</li>
+<li>从堆上分配，也称为动态内存分配。程序在运行的时候用malloc 或new 申请任意大小的内存，程序员自己负责在何时用free 或delete 释放内存。使用非常灵活，但问题也最多。</li>
+</ol>
+<div class="tabs" id="内存管理"><ul class="nav-tabs"><li class="tab active"><a href="#内存管理-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="内存管理-1"><font color="#66ccff">1.用malloc 或new 申请内存之后，应该立即检查指针值是否为NULL。防止使用指针值为NULL的内存。</font><br>
+
+<font color="#66ccff">2.不要忘记为数组和动态内存赋初值。防止将未被初始化的内存作为右值使用。</font><br>
+
+<font color="#66ccff">3.避免数组或指针的下标越界，特别要当心发证"多1"或者"少1"操作。</font><br>
+
+<font color="#66ccff">4.动态内存的申请与释放必须配对，防止内存泄漏。</font><br>
+
+<font color="#66ccff">5.用free 或delete 释放了内存之后，立即将指针设置为NULL，防止产生"野指针"。</font></div></div></div>
+<h2 id="类的构造函数、析构函数、成员函数、赋值函数"><a href="#类的构造函数、析构函数、成员函数、赋值函数" class="headerlink" title="类的构造函数、析构函数、成员函数、赋值函数"></a>类的构造函数、析构函数、成员函数、赋值函数</h2><h3 id="类的构造函数"><a href="#类的构造函数" class="headerlink" title="类的构造函数"></a>类的构造函数</h3><div class="tabs" id="类的构造函数"><ul class="nav-tabs"><li class="tab active"><a href="#类的构造函数-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="类的构造函数-1"><font color="#66ccff">1."缺省的拷贝构造函数"和"缺省的赋值函数"均采用"位拷贝"而非"值拷贝"的方式来实现，若类中含有指针变量，不能采用缺省的方式。</font><br>
+
+<font color="#66ccff">2.如果类存在继承关系，派生类必须在其初始化表里调用基类的构造函数。</font><br>
+
+<font color="#66ccff">3.类的const 常量只能在初始化表里被初始化，因为它不能在函数体内用赋值的方式来初始化。</font><br>
+
+<font color="#66ccff">4.非内部数据类型的成员对象采用初始化表的方式初始化较好。</font><br>
+
+<font color="#66ccff">5.拷贝构造函数和赋值函数非常容易混淆，常导致错写、错用。拷贝构造函数是在对象被创建时调用的，而赋值函数只能被已经存在了的对象调用。</font></div></div></div>
+<h3 id="成员函数"><a href="#成员函数" class="headerlink" title="成员函数"></a>成员函数</h3><div class="tabs" id="成员函数"><ul class="nav-tabs"><li class="tab active"><a href="#成员函数-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="成员函数-1"><font color="#66ccff">1.任何不会修改数据成员的函数都应该声明为const 类型。</font><br>
+
+<font color="#66ccff">2.如果类存在继承关系，派生类必须在其初始化表里调用基类的构造函数。</font><br>
+
+<font color="#66ccff">3.类的const 常量只能在初始化表里被初始化，因为它不能在函数体内用赋值的方式来初始化。</font><br>
+
+<font color="#66ccff">4.非内部数据类型的成员对象采用初始化表的方式初始化较好。</font><br>
+
+<font color="#66ccff">5.拷贝构造函数和赋值函数非常容易混淆，常导致错写、错用。拷贝构造函数是在对象被创建时调用的，而赋值函数只能被已经存在了的对象调用。</font></div></div></div>
+<h2 id="类的继承和组合"><a href="#类的继承和组合" class="headerlink" title="类的继承和组合"></a>类的继承和组合</h2><div class="tabs" id="类的继承和组合"><ul class="nav-tabs"><li class="tab active"><a href="#类的继承和组合-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="类的继承和组合-1"><font color="#66ccff">1.如果类A和类B毫不相关，不可以为了使B的功能更多些而让B继承A的功能和属性。</font><br>
+
+<font color="#66ccff">2.若在逻辑上B是A的"一种情况"，则允许B继承A的功能和属性。</font><br>
+
+<font color="#66ccff">3.若在逻辑上A是B的"一部分"(a part of)，则不允许B从A派生，而是要用A和其他东西组合出B。</font></div></div></div>
+<h2 id="其他规范及建议"><a href="#其他规范及建议" class="headerlink" title="其他规范及建议"></a>其他规范及建议</h2><h3 id="提高程序的效率"><a href="#提高程序的效率" class="headerlink" title="提高程序的效率"></a>提高程序的效率</h3><div class="tabs" id="提高程序的效率"><ul class="nav-tabs"><li class="tab active"><a href="#提高程序的效率-1">规则</a></li></ul><div class="tab-content"><div class="tab-pane active" id="提高程序的效率-1"><font color="#66ccff">1.不要一味地追求程序的效率，应当在满足正确性、可靠性、健壮性、可读性等质量因素的前提下，设法提高程序的效率。</font><br>
+
+<font color="#66ccff">2.以提高程序的全局效率为主，提高局部效率为辅。(全局效率是指站在整个系统的角度上考虑的效率，局部效率是指站在模块或函数角度上考虑的效率)</font><br>
+
+<font color="#66ccff">3.在优化程序的效率时，应当先找出限制效率的"瓶颈"，不要在无关紧要之处优化。</font><br>
+
+<font color="#66ccff">4.先优化数据结构和算法，再优化执行代码。</font><br>
+
+<font color="#66ccff">5.有时候时间效率和空间效率可能对立，此时应当分析哪个更重要，作出适当的折中。</font><br>
+
+<font color="#66ccff">6.不要追求紧凑的代码，因为紧凑的代码并不能产生高效的机器码。</font></div></div></div>
+<h3 id="一些有益的建议"><a href="#一些有益的建议" class="headerlink" title="一些有益的建议"></a>一些有益的建议</h3><div class="tabs" id="一些有益的建议"><ul class="nav-tabs"><li class="tab active"><a href="#一些有益的建议-1">建议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="一些有益的建议-1"><font color="#66ccff">1.当心那些视觉上不易分辨的操作符发生书写错误。我们经常会把"=="写成"="，其他符号也很容易发生"丢失"失误，然而编译器却不一定能自动指出这些错误。</font><br>
+
+<font color="#66ccff">2.变量(指针、数组)被创建之后应当及时把它们初始化，以防止把为被初始化的变量当成右值使用。</font><br>
+
+<font color="#66ccff">3.当心变量的初值、缺省值错误，或者精度不够。</font><br>
+
+<font color="#66ccff">4.当心数据类型转换发生错误。尽量使用显式的数据类型转换，避免让编译器悄悄的进行隐式数据类型转换。</font><br>
+
+<font color="#66ccff">5.当心变量发生上溢或下溢，数组的下标越界。</font><br>
+
+<font color="#66ccff">6.当心忘记编写错误处理程序，当心错误处理程序本身有误。</font><br>
+
+<font color="#66ccff">7.当心文件I/O有误。</font><br>
+
+<font color="#66ccff">8.避免编写技巧性很高的代码。</font><br>
+
+<font color="#66ccff">9.不要设计面面俱到、非常灵活的数据结构。</font><br>
+
+<font color="#66ccff">10.如果原有的代码质量比较好，尽量复用它。但是不要修补很差劲的代码，应当重新编写。</font><br>
+
+<font color="#66ccff">11.尽量使用标准库函数，不要"发明"已经存在的库函数。</font><br>
+
+<font color="#66ccff">12.尽量不要使用与具体硬件或软件环境关系密切的变量。</font><br>
+
+<font color="#66ccff">13.把编译器的选择项设置为最严格状态。</font><br>
+
+<font color="#66ccff">14.如果可能的话，使用LogiScope等工具进行代码审查。</font></div></div></div>
       
     </div>
 
@@ -743,7 +906,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
   <p><span>本文标题:</span>C/C++编程规范</p>
   <p><span>文章作者:</span>Snowakura</p>
   <p><span>发布时间:</span>2019年07月26日 - 22:04:11</p>
-  <p><span>最后更新:</span>2019年07月30日 - 23:58:21</p>
+  <p><span>最后更新:</span>2019年08月20日 - 20:10:12</p>
   <p><span>原始链接:</span><a href="/2019/07/26/C-C-编程规范/" title="C/C++编程规范">https://snowakura.github.io/2019/07/26/C-C-编程规范/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snowakura.github.io/2019/07/26/C-C-编程规范/" aria-label="复制成功！"></i></span>
   </p>
@@ -890,7 +1053,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -911,7 +1074,9 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -936,7 +1101,9 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1005,7 +1172,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件结构"><span class="nav-number">1.</span> <span class="nav-text">文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#版权和版本的声明"><span class="nav-number">1.1.</span> <span class="nav-text">版权和版本的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#头文件的结构"><span class="nav-number">1.2.</span> <span class="nav-text">头文件的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义文件的结构"><span class="nav-number">1.3.</span> <span class="nav-text">定义文件的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">1.4.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序版式"><span class="nav-number">2.</span> <span class="nav-text">程序版式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#空行"><span class="nav-number">2.1.</span> <span class="nav-text">空行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码行"><span class="nav-number">2.2.</span> <span class="nav-text">代码行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码行内的空格"><span class="nav-number">2.3.</span> <span class="nav-text">代码行内的空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对齐"><span class="nav-number">2.4.</span> <span class="nav-text">对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长行拆分"><span class="nav-number">2.5.</span> <span class="nav-text">长行拆分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符的位置"><span class="nav-number">2.6.</span> <span class="nav-text">修饰符的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">2.7.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的版式"><span class="nav-number">2.8.</span> <span class="nav-text">类的版式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名规则"><span class="nav-number">3.</span> <span class="nav-text">命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#共性规则"><span class="nav-number">3.1.</span> <span class="nav-text">共性规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows应用程序命名规则"><span class="nav-number">3.2.</span> <span class="nav-text">Windows应用程序命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux应用程序函数命名规则"><span class="nav-number">3.3.</span> <span class="nav-text">Linux应用程序函数命名规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式和基本语句"><span class="nav-number">4.</span> <span class="nav-text">表达式和基本语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符的优先级"><span class="nav-number">4.1.</span> <span class="nav-text">运算符的优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合表达式"><span class="nav-number">4.2.</span> <span class="nav-text">复合表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-语句"><span class="nav-number">4.3.</span> <span class="nav-text">if 语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔变量与零值比较"><span class="nav-number">4.3.1.</span> <span class="nav-text">布尔变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整型变量与零值比较"><span class="nav-number">4.3.2.</span> <span class="nav-text">整型变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮点变量与零值比较"><span class="nav-number">4.3.3.</span> <span class="nav-text">浮点变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指针变量与零值比较"><span class="nav-number">4.3.4.</span> <span class="nav-text">指针变量与零值比较</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环语句的效率"><span class="nav-number">4.4.</span> <span class="nav-text">循环语句的效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-语句的循环控制变量"><span class="nav-number">4.5.</span> <span class="nav-text">for 语句的循环控制变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#switch-语句"><span class="nav-number">4.6.</span> <span class="nav-text">switch 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#goto-语句"><span class="nav-number">4.7.</span> <span class="nav-text">goto 语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">5.</span> <span class="nav-text">常量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件结构"><span class="nav-number">1.</span> <span class="nav-text">文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#版权和版本的声明"><span class="nav-number">1.1.</span> <span class="nav-text">版权和版本的声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#头文件的结构"><span class="nav-number">1.2.</span> <span class="nav-text">头文件的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义文件的结构"><span class="nav-number">1.3.</span> <span class="nav-text">定义文件的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目录结构"><span class="nav-number">1.4.</span> <span class="nav-text">目录结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序版式"><span class="nav-number">2.</span> <span class="nav-text">程序版式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#空行"><span class="nav-number">2.1.</span> <span class="nav-text">空行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码行"><span class="nav-number">2.2.</span> <span class="nav-text">代码行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码行内的空格"><span class="nav-number">2.3.</span> <span class="nav-text">代码行内的空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对齐"><span class="nav-number">2.4.</span> <span class="nav-text">对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#长行拆分"><span class="nav-number">2.5.</span> <span class="nav-text">长行拆分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修饰符的位置"><span class="nav-number">2.6.</span> <span class="nav-text">修饰符的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注释"><span class="nav-number">2.7.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类的版式"><span class="nav-number">2.8.</span> <span class="nav-text">类的版式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名规则"><span class="nav-number">3.</span> <span class="nav-text">命名规则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#共性规则"><span class="nav-number">3.1.</span> <span class="nav-text">共性规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows应用程序命名规则"><span class="nav-number">3.2.</span> <span class="nav-text">Windows应用程序命名规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux应用程序函数命名规则"><span class="nav-number">3.3.</span> <span class="nav-text">Linux应用程序函数命名规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式和基本语句"><span class="nav-number">4.</span> <span class="nav-text">表达式和基本语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运算符的优先级"><span class="nav-number">4.1.</span> <span class="nav-text">运算符的优先级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合表达式"><span class="nav-number">4.2.</span> <span class="nav-text">复合表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-语句"><span class="nav-number">4.3.</span> <span class="nav-text">if 语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#布尔变量与零值比较"><span class="nav-number">4.3.1.</span> <span class="nav-text">布尔变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整型变量与零值比较"><span class="nav-number">4.3.2.</span> <span class="nav-text">整型变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮点变量与零值比较"><span class="nav-number">4.3.3.</span> <span class="nav-text">浮点变量与零值比较</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#指针变量与零值比较"><span class="nav-number">4.3.4.</span> <span class="nav-text">指针变量与零值比较</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环语句的效率"><span class="nav-number">4.4.</span> <span class="nav-text">循环语句的效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-语句的循环控制变量"><span class="nav-number">4.5.</span> <span class="nav-text">for 语句的循环控制变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#switch-语句"><span class="nav-number">4.6.</span> <span class="nav-text">switch 语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#goto-语句"><span class="nav-number">4.7.</span> <span class="nav-text">goto 语句</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">5.</span> <span class="nav-text">常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#const与-define的比较"><span class="nav-number">5.1.</span> <span class="nav-text">const与#define的比较</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量定义规则"><span class="nav-number">5.2.</span> <span class="nav-text">常量定义规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数设计"><span class="nav-number">6.</span> <span class="nav-text">函数设计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#参数的规则"><span class="nav-number">6.1.</span> <span class="nav-text">参数的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#返回值的规则"><span class="nav-number">6.2.</span> <span class="nav-text">返回值的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数内部实现的规则"><span class="nav-number">6.3.</span> <span class="nav-text">函数内部实现的规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他建议"><span class="nav-number">6.4.</span> <span class="nav-text">其他建议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用断言"><span class="nav-number">6.5.</span> <span class="nav-text">使用断言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用与指针的比较"><span class="nav-number">6.6.</span> <span class="nav-text">引用与指针的比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重载和内联"><span class="nav-number">7.</span> <span class="nav-text">重载和内联</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通函数重载"><span class="nav-number">7.1.</span> <span class="nav-text">普通函数重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员函数的重载覆盖与隐藏"><span class="nav-number">7.2.</span> <span class="nav-text">成员函数的重载覆盖与隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内联函数"><span class="nav-number">7.3.</span> <span class="nav-text">内联函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内存管理"><span class="nav-number">8.</span> <span class="nav-text">内存管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的构造函数、析构函数、成员函数、赋值函数"><span class="nav-number">9.</span> <span class="nav-text">类的构造函数、析构函数、成员函数、赋值函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类的构造函数"><span class="nav-number">9.1.</span> <span class="nav-text">类的构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成员函数"><span class="nav-number">9.2.</span> <span class="nav-text">成员函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的继承和组合"><span class="nav-number">10.</span> <span class="nav-text">类的继承和组合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他规范及建议"><span class="nav-number">11.</span> <span class="nav-text">其他规范及建议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#提高程序的效率"><span class="nav-number">11.1.</span> <span class="nav-text">提高程序的效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些有益的建议"><span class="nav-number">11.2.</span> <span class="nav-text">一些有益的建议</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1023,7 +1190,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
           <h3 class="widget-title"></h3>
           <div id="myCanvasContainer" class="widget tagcloud">
               <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">1</span></li></ul>
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/习题/">习题</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/规范/">规范</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络/">计算机网络</a><span class="tag-list-count">2</span></li></ul>
               </canvas>
           </div>
         </div>
@@ -1044,7 +1211,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
         
 
 
-<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-07-31</span>
+<div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2019-10-28</span>
   <span class="with-love" id="animate">
     <i class="fa fa-snowflake-o"></i>
   </span>
@@ -1056,7 +1223,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">12k</span>
+    <span title="站点总字数">103k</span>
   
 
   
@@ -1065,7 +1232,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">2:52</span>
   
 </div>
 
@@ -1112,6 +1279,17 @@ setInterval("createtime()",250);
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
+
+<!-- 新增流程图mermaid -->
+
+  <script src="https://unpkg.com/mermaid@/dist/mermaid.min.js"></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
+
+<!-- 新增mermaid END -->
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

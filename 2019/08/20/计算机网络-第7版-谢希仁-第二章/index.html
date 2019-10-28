@@ -104,35 +104,41 @@
 
 
 
-  <meta name="description" content="本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机网络的性能指标。 计算机网络分层次的体系结构，包含协议和服务的概念。">
+  <meta name="description" content="本章重要内容：  物理层的任务。 几种常用的信道复用技术。 几种常用的宽带接入技术，主要是ADSL和FTTx。">
 <meta name="keywords" content="计算机网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="计算机网络(第7版)谢希仁-第一章绪论">
-<meta property="og:url" content="https://snowakura.github.io/2019/07/27/计算机网络-第7版-谢希仁-第一章/index.html">
+<meta property="og:title" content="计算机网络(第7版)谢希仁-第二章物理层">
+<meta property="og:url" content="https://snowakura.github.io/2019/08/20/计算机网络-第7版-谢希仁-第二章/index.html">
 <meta property="og:site_name" content="樱落成雪的博客">
-<meta property="og:description" content="本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机网络的性能指标。 计算机网络分层次的体系结构，包含协议和服务的概念。">
+<meta property="og:description" content="本章重要内容：  物理层的任务。 几种常用的信道复用技术。 几种常用的宽带接入技术，主要是ADSL和FTTx。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.1-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.2-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.2-2.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.2-3.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.3-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.3-2.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.5-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.6-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.6-2.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.6-3.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-1.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-2.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-3.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-4.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-5.png">
-<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/1.7-6.png">
-<meta property="og:updated_time" content="2019-08-20T12:23:54.795Z">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.2-1.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.2-1.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.2-2.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.2-2.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.2-3.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.2-3.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-1.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-1.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-2.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-2.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-3.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-3.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-4.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-4.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-5.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-5.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-6.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-6.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-7.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-7.png">
+<meta property="og:image" content="https://snowakura.github.io/images/计算机网络/2.3-8.png">
+<meta property="og:image" content="https://snowakura.github.io/2019/08/20/images/计算机网络/2.3-8.png">
+<meta property="og:updated_time" content="2019-10-28T03:35:25.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="计算机网络(第7版)谢希仁-第一章绪论">
-<meta name="twitter:description" content="本课程重要概念：计算机网络的体系结构。 本章重要内容：  互联网边缘部分和核心部分的作用，其中包含分组交换的概念。 计算机网络的性能指标。 计算机网络分层次的体系结构，包含协议和服务的概念。">
-<meta name="twitter:image" content="https://snowakura.github.io/images/计算机网络/1.1-1.png">
+<meta name="twitter:title" content="计算机网络(第7版)谢希仁-第二章物理层">
+<meta name="twitter:description" content="本章重要内容：  物理层的任务。 几种常用的信道复用技术。 几种常用的宽带接入技术，主要是ADSL和FTTx。">
+<meta name="twitter:image" content="https://snowakura.github.io/images/计算机网络/2.2-1.png">
 
 
 
@@ -140,7 +146,7 @@
 
   
   
-  <link rel="canonical" href="https://snowakura.github.io/2019/07/27/计算机网络-第7版-谢希仁-第一章/">
+  <link rel="canonical" href="https://snowakura.github.io/2019/08/20/计算机网络-第7版-谢希仁-第二章/">
 
 
 
@@ -150,7 +156,7 @@
   };
 </script>
 
-  <title>计算机网络(第7版)谢希仁-第一章绪论 | 樱落成雪的博客</title>
+  <title>计算机网络(第7版)谢希仁-第二章物理层 | 樱落成雪的博客</title>
   
 
 
@@ -412,7 +418,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://snowakura.github.io/2019/07/27/计算机网络-第7版-谢希仁-第一章/">
+    <link itemprop="mainEntityOfPage" href="https://snowakura.github.io/2019/08/20/计算机网络-第7版-谢希仁-第二章/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Snowakura">
@@ -429,7 +435,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
         
         
-          <h1 class="post-title" itemprop="name headline">计算机网络(第7版)谢希仁-第一章绪论
+          <h1 class="post-title" itemprop="name headline">计算机网络(第7版)谢希仁-第二章物理层
 
               
             
@@ -455,7 +461,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
               
 
-              <time title="创建时间：2019-07-27 16:34:08" itemprop="dateCreated datePublished" datetime="2019-07-27T16:34:08+08:00">2019-07-27</time>
+              <time title="创建时间：2019-08-20 19:52:56" itemprop="dateCreated datePublished" datetime="2019-08-20T19:52:56+08:00">2019-08-20</time>
             </span>
           
 
@@ -470,7 +476,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-20 20:23:54" itemprop="dateModified" datetime="2019-08-20T20:23:54+08:00">2019-08-20</time>
+                <time title="修改时间：2019-10-28 11:35:25" itemprop="dateModified" datetime="2019-10-28T11:35:25+08:00">2019-10-28</time>
               </span>
             
           
@@ -544,183 +550,175 @@ WIDGET = {FID: 'xOIWAfdIEd'}
       
 
       
-        <p>本课程重要概念：计算机网络的体系结构。</p>
-<p>本章重要内容：</p>
+        <p>本章重要内容：</p>
 <ol>
-<li>互联网边缘部分和核心部分的作用，其中包含分组交换的概念。</li>
-<li>计算机网络的性能指标。</li>
-<li>计算机网络分层次的体系结构，包含协议和服务的概念。</li>
+<li>物理层的任务。</li>
+<li>几种常用的信道复用技术。</li>
+<li>几种常用的宽带接入技术，主要是ADSL和FTTx。</li>
 </ol>
 <a id="more"></a>
-<h2 id="计算机网络在信息时代中的作用"><a href="#计算机网络在信息时代中的作用" class="headerlink" title="计算机网络在信息时代中的作用"></a>计算机网络在信息时代中的作用</h2><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.1-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<p>互联网两个重要基本特点：连通性和共享。</p>
-<h2 id="互联网概述"><a href="#互联网概述" class="headerlink" title="互联网概述"></a>互联网概述</h2><h3 id="网络的网络"><a href="#网络的网络" class="headerlink" title="网络的网络"></a>网络的网络</h3><div class="note ">
-            <p>计算机网络(简称网络)由若干结点(node)和连接这些节点的链路(link)组成。</p><p>网络之间通过路由器互连起来，构成一个覆盖范围更大的计算机网络，成为互连网(“网络的网络”)。</p><p><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.2-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
-          </div>
-<p>网络把许多计算机连接在一起，互连网把许多网络通过路由器连接在一起。与网络相连的计算机常称为主机。</p>
-<h3 id="互联网基础结构发展的三个阶段"><a href="#互联网基础结构发展的三个阶段" class="headerlink" title="互联网基础结构发展的三个阶段"></a>互联网基础结构发展的三个阶段</h3><ul>
-<li>一阶段是从单个网络ARPANET向互连网发展的过程。</li>
-</ul>
-<p>1983年TCP/IP协议成为ARPANET上的标准协议，使得所有使用TCP/IP协议的计算机都能利用互连网相互通信，因而将1983年作为互联网的诞生时间。所以互联网Internet前身为美国的ARPANET。</p>
-<ul>
-<li>二阶段特点是建成了三级结构的互联网。</li>
-</ul>
-<p>三级计算机网络分为主干网、地区网和校园网(企业网)。</p>
-<ul>
-<li>三阶段特点是逐渐形成多层次ISP结构的互联网。</li>
-</ul>
-<p>互联网服务提供商(Internet Service Provider)。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.2-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<p>互联网交换点IXP(Internet eXchange Point)：主要作用是允许两个网络直接相连并交换分组，而不再需要通过第三个网络来转发分组。由此可以更快地转发分组，更加有效地利用网络资源。</p>
-<h3 id="互联网的标准化工作"><a href="#互联网的标准化工作" class="headerlink" title="互联网的标准化工作"></a>互联网的标准化工作</h3><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.2-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h2 id="互联网的组成"><a href="#互联网的组成" class="headerlink" title="互联网的组成"></a>互联网的组成</h2><p>互联网可分为两部分：</p>
-<p>​    -边缘部分。由所有连接在互联网上的主机组成，用户直接使用。</p>
-<p>​    -核心部分。由大量网络和路由器组成，为边缘部分提供服务。</p>
-<h3 id="互联网的边缘部分"><a href="#互联网的边缘部分" class="headerlink" title="互联网的边缘部分"></a>互联网的边缘部分</h3><p>端系统(边缘部分主机又称)之间的通信方式分为两大类：客户-服务器方式(C/S 方式)和对等方式(P2P 方式)。</p>
-<div class="tabs" id="互联网的边缘部分"><ul class="nav-tabs"><li class="tab active"><a href="#互联网的边缘部分-1">客户-服务器方式</a></li><li class="tab"><a href="#互联网的边缘部分-2">对等方式</a></li></ul><div class="tab-content"><div class="tab-pane active" id="互联网的边缘部分-1"><p>  (client/server)</p>
-<p>​    客户(client)是服务请求方，服务器(server)是服务提供方。</p>
-<p>客户程序：</p>
-<p>​    1.被用户调用后运行，在通信时主动向远地服务器发起通信。须知道服务器程序地址。</p>
-<p>​    2.不需要特殊的硬件和很复杂的操作系统。</p>
-<p>服务器程序：</p>
-<p>​    1.是一种专门用来提供某种服务的程序，可同时处理多个客户请求。</p>
-<p>​    2.不需知道客户程序地址。</p>
-<p>​    3.一般有强大的硬件和高级的操作系统支持。</p></div><div class="tab-pane" id="互联网的边缘部分-2"><p>(peer-to-peer)</p>
-<p>双方进行平等的、对等连接通信。</p>
-<p>本质上看仍然是使用C/S方式，只是主机既是客户又同时是服务器。</p></div></div></div>
-<h3 id="互联网的核心部分"><a href="#互联网的核心部分" class="headerlink" title="互联网的核心部分"></a>互联网的核心部分</h3><p>在核心部分起特殊作用的是路由器，它是实现分组交换的关键构件，任务是转发收到的分组。</p>
-<p>分组交换采用存储转发技术。将数据分段为多个更小的等长数据段，在数据段前面添加首部，构成分组，又称”包”，首部又称”包头”。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.3-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<p>分组交换的优点：</p>
-<p>​    1.高效。在分组传输的过程中动态分配传输带宽，对通信链路逐段占用</p>
-<p>​    2.灵活。为每个分组独立地选择最合适的转发路由</p>
-<p>​    3.迅速。以分组作为传送单位，可以先不建立连接就能发送分组</p>
-<p>​    4.可靠。分布式多路由的分组交换网</p>
-<p>分组交换的问题：时延与开销。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.3-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<p>电路交换适合于数据量很大的实时性传输。</p>
-<h2 id="计算机网络在我国的发展"><a href="#计算机网络在我国的发展" class="headerlink" title="计算机网络在我国的发展"></a>计算机网络在我国的发展</h2><p>中国1994年4月20日用一条64kbit/s专线正式连入互联网。</p>
-<p>事件：</p>
-<p>​    1996年张朝阳创立爱特信公司，推出”搜狐”</p>
-<p>​    1997年丁磊创立网易公司</p>
-<p>​    1998年王志东创立新浪网站</p>
-<p>​    1998年马化腾+张志东创立腾讯公司</p>
-<p>​    1999年马云创立阿里巴巴网站</p>
-<p>​    2000年李彦宏+徐勇创建百度网站</p>
-<h2 id="计算机网络的类别"><a href="#计算机网络的类别" class="headerlink" title="计算机网络的类别"></a>计算机网络的类别</h2><h3 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h3><p>目前较好的定义：计算机网络主要是由一些通用的、可编程的硬件互连而成的，而这些硬件并非专门用来实现某一特定目的。</p>
-<h3 id="几种不同类别的计算机网络"><a href="#几种不同类别的计算机网络" class="headerlink" title="几种不同类别的计算机网络"></a>几种不同类别的计算机网络</h3><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.5-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h2 id="计算机网络的性能"><a href="#计算机网络的性能" class="headerlink" title="计算机网络的性能"></a>计算机网络的性能</h2><h3 id="计算机网络的性能指标"><a href="#计算机网络的性能指标" class="headerlink" title="计算机网络的性能指标"></a>计算机网络的性能指标</h3><h4 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h4><p>网络技术中的速率指的是数据的传送速率，也成为数据率(data rate)或比特率(bit rate)。单位是 bit/s(或 b/s ,有时也写为 bps，即 bit per second)。</p>
-<p>k = 10<sup>3</sup> = 千；M = 10<sup>6</sup> = 兆； G = 10<sup>9</sup> = 吉；T = 10<sup>12</sup> = 太；P = 10<sup>15</sup> = 拍；…</p>
-<p>网络的速率指额定速率或标称速率。</p>
-<h4 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h4><p>一条通信链路的”带宽”越宽，其所能传输的”最高数据率”越高。</p>
-<div class="tabs" id="带宽"><ul class="nav-tabs"><li class="tab active"><a href="#带宽-1">意义1</a></li><li class="tab"><a href="#带宽-2">意义2</a></li></ul><div class="tab-content"><div class="tab-pane active" id="带宽-1"><p>本来是指某个信号具有的频带宽度。这种意义下的带宽的单位是赫(或千赫、兆赫、吉赫等)。</p>
-<p>表示某信道允许通过的信号频带范围就成为该信道的带宽(或通频带)。</p></div><div class="tab-pane" id="带宽-2"><p>在计算机网络中，带宽用来表示网络中某通道传送数据的能力，因此网络带宽表示在单位时间内网络中某信道所能通过的”最高数据率”。该意义下带宽单位是 bit/s。</p></div></div></div>
-<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>单位时间内通过某个网络(或信道、接口)的实际的数据量。</p>
-<p>受网络带宽或网络额定速率限制。</p>
-<h4 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h4><p>数据从网络(或链路)的一端传送到另一端所需的时间。有时也称为延迟或迟延。</p>
-<p>时延 = 发送时延 + 传播时延 + 处理时延 + 排队时延</p>
-<p>一条通信链路的”带宽”越宽，其所能传输的”最高数据率”越高。</p>
-<div class="tabs" id="时延"><ul class="nav-tabs"><li class="tab active"><a href="#时延-1">发送时延</a></li><li class="tab"><a href="#时延-2">传播时延</a></li><li class="tab"><a href="#时延-3">处理时延</a></li><li class="tab"><a href="#时延-4">排队时延</a></li></ul><div class="tab-content"><div class="tab-pane active" id="时延-1"><p>主机或路由器发送数据帧所需要的时间。又称传输时延。</p>
-<script type="math/tex; mode=display">
-发送时延 = \frac{数据帧长度(bit)}{发送速率(bit/s)}</script></div><div class="tab-pane" id="时延-2"><p>电磁波在信道中传播一定距离需要花费的时间。</p>
-<script type="math/tex; mode=display">
-传播时延 = \frac{信道长度(m)}{电磁波在信道上的传播速率(m/s)}</script><p>1000km唱的光纤线路产生的传播时延大约为5ms。</p></div><div class="tab-pane" id="时延-3"><p>主机或路由器在收到分组时要花费一定时间进行处理从而产生的时延。</p></div><div class="tab-pane" id="时延-4"><p>分组在经过网络传输时，要经过许多路由器。但分组在进入路由器后要先在输入队列中排队等待处理。在路由器确定了转发接口后，还要在输出队列中排队等待转发。由此产生的时延。</p></div></div></div>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.6-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h4 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h4><script type="math/tex; mode=display">
-时延带宽积 = 传播时延 * 带宽</script><p>链路的时延带宽积又称为以比特为单位的链路长度。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.6-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h4 id="往返时间RTT"><a href="#往返时间RTT" class="headerlink" title="往返时间RTT"></a>往返时间RTT</h4><script type="math/tex; mode=display">
-发送时间 = \frac{数据长度}{发送速率}</script><script type="math/tex; mode=display">
-有效数据率 = \frac{数据长度}{发送时间 + RTT}</script><p>往返时间还包括中间结点处理时延、排队时延、转发数据的发送时延。</p>
-<h4 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h4><div class="tabs" id="利用率"><ul class="nav-tabs"><li class="tab active"><a href="#利用率-1">信道利用率</a></li><li class="tab"><a href="#利用率-2">网络利用率</a></li></ul><div class="tab-content"><div class="tab-pane active" id="利用率-1"><p>信道利用率指出某信道有百分之几的时间是被利用的(有数据通过)。</p>
-<p>信道利用率并非越高越好：当某信道的利用率增大时，其引起的时延也迅速增加。</p></div><div class="tab-pane" id="利用率-2"><p>网络利用率是全网络的信道利用率的加权平均值。</p></div></div></div>
-<script type="math/tex; mode=display">
-网络当前时延 = \frac{网络空闲时的时延}{1 - 网络的利用率}</script><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.6-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h3 id="计算机网络的非性能特征"><a href="#计算机网络的非性能特征" class="headerlink" title="计算机网络的非性能特征"></a>计算机网络的非性能特征</h3><p>费用</p>
-<p>质量</p>
-<p>标准化</p>
-<p>可靠性</p>
-<p>可扩展性和可升级性</p>
-<p>易于管理和维护</p>
-<h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h3 id="计算机网络体系结构的形成"><a href="#计算机网络体系结构的形成" class="headerlink" title="计算机网络体系结构的形成"></a>计算机网络体系结构的形成</h3><div class="tabs" id="计算机网络体系结构的形成"><ul class="nav-tabs"><li class="tab active"><a href="#计算机网络体系结构的形成-1">拓展，根据韩立刚老师计算机网络课程补充知识</a></li></ul><div class="tab-content"><div class="tab-pane active" id="计算机网络体系结构的形成-1"><p>OSI参考模型分7层</p>
-<p>(程序开发人员考虑问题↓)</p>
-<p>应用层。能够产生网络流量和用户交互的应用程序。</p>
-<p>表示层。数据的加密，压缩，编码等。</p>
-<p>会话层。服务和客户端建立的会话。</p>
-<p>(网络工程师↓)</p>
-<p>传输层。可靠传输(建立会话)，不可靠传输(不建立会话)，流量控制。</p>
-<p>网络层。选择最佳路径，IP地址编址。</p>
-<p>数据链路层。数据如何封装，添加物理层地址(MAC地址)。</p>
-<p>(标准化设备↓)</p>
-<p>物理层。电压，接口标准。</p>
+<h2 id="—"><a href="#—" class="headerlink" title="—-"></a>—-</h2><h2 id="2-1-物理层的基本概念"><a href="#2-1-物理层的基本概念" class="headerlink" title="2.1 物理层的基本概念"></a>2.1 物理层的基本概念</h2><p>用于物理层的协议也常称为物理层<strong>规程</strong>(procedure)。</p>
+<p>将物理层的主要任务描述为确定与传输媒体的接口有关的一些特性：</p>
+<ol>
+<li><strong>机械特性</strong>。    指明接口所用接线器的形状和尺寸、引脚数目和排列、固定和锁定装置，等。平时常见的各种规格的接插件都有严格的标准化规定。</li>
+<li><strong>电气特性</strong>。    指明在接口电缆的各条线上出现的电压范围。</li>
+<li><strong>功能特性</strong>。    指明某条线上出现的某一电平的电压意义。</li>
+<li><strong>过程特性</strong>。    指明对于不同功能的各种可能事件的出现顺序。</li>
+</ol>
 <hr>
-<p>网络排错：低层往高层逐一排查。</p>
-<p>网络安全和OSI参考模型：</p>
-<p>​    物理层安全。</p>
-<p>​    数据链路层安全。</p>
-<p>​    网络层安全。</p>
-<p>​    应用层安全。</p></div></div></div>
-<h3 id="协议与划分层次"><a href="#协议与划分层次" class="headerlink" title="协议与划分层次"></a>协议与划分层次</h3><p>为进行网络中的数据交换而建立的规则、标准或约定成为网络协议，简称协议。</p>
-<p>网络协议由三个要素组成：语法；语义；同步。</p>
-<p>分层结构好处：</p>
+<p>数据在计算机内部多采用并行传输方式，但在通信线路(传输媒体)上一般都是串行传输(考虑经济)，即逐个比特按时间顺序传输。</p>
+<p>具体的物理层协议种类较多。原因：物理连接的方式(点对点，多点连接，广播连接)很多，传输媒体的种类(架空明线，双绞线，对称电缆，同轴电缆，光缆，无线信道等)也很多。</p>
+<hr>
+<hr>
+<h2 id="2-2-数据通信的基础知识"><a href="#2-2-数据通信的基础知识" class="headerlink" title="2.2 数据通信的基础知识"></a>2.2 数据通信的基础知识</h2><h3 id="2-2-1-数据通信系统的模型"><a href="#2-2-1-数据通信系统的模型" class="headerlink" title="2.2.1 数据通信系统的模型"></a>2.2.1 数据通信系统的模型</h3><p>一个数据通信系统可划分为三大部分，即源系统(或发送端、发送方)、传输系统(或传输网络)和目的系统(或接收端、接收方)。如图所示。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.2-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.2-1.png" alt="图2.2-1 数据通信系统的模型"></p>
+<p>其中，源系统一般包括两个部分：</p>
+<ul>
+<li><strong>源点</strong>(source)     源点设备要传输的数据。源点又称为<strong>源站</strong>或<strong>信源</strong>。</li>
+<li><strong>发送器</strong>               通常源点生成的数字比特流要通过发送器编码后才能够在传输系统中进行传输。典型的发送器就是调制器。</li>
+</ul>
+<p>目的系统也包括两个部分：</p>
+<ul>
+<li><strong>接收器</strong>                         接收传输系统传送过来的信号，并把它转换为能够被目的设备处理的信息。典型的接收器就是调解器。</li>
+<li>终点(destination)     终点设备从接收器获取传送来的数字比特流，然后把信息输出。终点又称为<strong>目的站</strong>或<strong>信宿</strong>。</li>
+</ul>
+<hr>
+<p>通信的目的是传送<strong>消息</strong>(message)。</p>
+<p><strong>数据</strong>(data)是传送消息的实体。数据是使用特定方式表示的信息。</p>
+<p><strong>信号</strong>(signal)是数据的电气或电磁的表现。</p>
+<p>信号可分为以下两大类：</p>
+<ul>
+<li><strong>模拟信号</strong>(或<strong>连续信号</strong>)        代表消息的参数的取值是连续的。在图2.1-1中表示为用户家中的调制解调器到电话端局之间的用户线上的信号。</li>
+<li><strong>数字信号</strong>(或<strong>离散信号</strong>)        代表消息的参数的取值是离散的。在图2.1-1中表示为用户家中的计算机到调制解调器之间，和电话网中继线上的信号。</li>
+</ul>
+<p>(在使用时间域(时域)的波形表示数字信号时，代表不同离散数值的基本波形就称为<strong>码元</strong>.)(一个码元所携带的信息量是不固定的，由调制方式和编码方式决定.)</p>
+<h3 id="2-2-2-有关信道的几个基本概念"><a href="#2-2-2-有关信道的几个基本概念" class="headerlink" title="2.2.2 有关信道的几个基本概念"></a>2.2.2 有关信道的几个基本概念</h3><p>信道≠电路。一条通信电路往往包含一条发送信道和一条接收信道。</p>
+<p><strong>信道</strong>(channel)一般用来表示向某一个方向发送信息的媒体。</p>
+<p>从通信的双方信息交互的方式来分，有以下三种基本方式：</p>
 <ol>
-<li>各层之间是独立的。</li>
-<li>灵活性好。</li>
-<li>结构上可分隔开。</li>
-<li>易于实现和维护。</li>
-<li>能促进标准化工作。</li>
+<li><strong>单向通信</strong>            又称<strong>单工通信</strong>，即只有一个方向的通信而没有反方向的交互。eg无线电广播，有线电广播，电视广播。</li>
+<li><strong>双向交替通信</strong>    又称<strong>半双工通信</strong>，即通信的双方都可以发送信息，但不能双方同时发送。</li>
+<li><strong>双向同时通信</strong>    又称<strong>全双工通信</strong>，即通信双方可以同时发送和接受信息。</li>
 </ol>
-<p>各层要完成的功能：</p>
+<p>(常用语：”单工”也常被用作表示”双向交替通信”，例如”单工电台”。)</p>
+<hr>
+<p><strong>基带信号</strong>(即基本频带信号)即为来自信源的信号。其往往包含有较多的低频成分，甚至直流成分。但许多信道不能传输这两种成分，故须对基带信号进行<strong>调制</strong>(modulation)。</p>
+<p>调制分为以下两大类：</p>
+<ul>
+<li><strong>基带调制</strong>        只对基带信号的波形进行变换，是它能与信道特性相适应，但变换后仍是基带信号。该方式是把数字信号转换为另一种形式的数字信号，因此该过程常被称为<strong>编码</strong>(coding)。</li>
+<li><strong>带通调制</strong>        使用<strong>载波</strong>(carrier)进行调制，将基带信号的频率范围搬移到较高的频段，并转换为模拟信号，在模拟信道中传输。调制后的信号称为<strong>带通信号</strong>(仅在一段频率范围内能通过信道)。</li>
+</ul>
+<hr>
+<p>常用编码方式：</p>
+<ul>
+<li><strong>不归零制</strong>                        正电平代表1，负电平代表0。</li>
+<li><strong>归零制</strong>                            正脉冲代表1，负脉冲代表0。</li>
+<li><strong>曼彻斯特编码</strong>                位周期中心的向上跳变代表0，向下跳变代表1。</li>
+<li><strong>查分曼彻斯特编码</strong>        在每一位的中心处始终都有跳变，位开始边界有跳变代表0，没有跳变代表1。</li>
+</ul>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.2-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.2-2.png" alt="图2.2-2 数字信号常用的编码方式"></p>
+<p>曼彻斯特(Manchester)编码产生的信号频率比不归零制高。</p>
+<p>不归零制不能从信号波形本身提取信号时钟频率(即没有自同步能力)，曼彻斯特编码具有自同步能力。</p>
+<hr>
+<p>基本的带通调制方法：</p>
+<ul>
+<li><strong>调幅</strong>(AM)        即载波的振幅随基带数字信号而变化。eg，0或1分别对应于无载波或有载波输出。</li>
+<li><strong>调频</strong>(FM)        即载波的频率随基带数字信号而变化。eg，0或1分别对应于频率f1或f2。</li>
+<li><strong>调相</strong>(PM)        即载波的初始相位随基带数字信号而变化。eg，0或1分别对应于相位0度或180度。</li>
+</ul>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.2-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.2-3.png" alt="图2.2-3 最基本的三种调制方法"></p>
+<p>(<strong>正交振幅调制QAM</strong>(Quadrature Amplitude Modulation)：技术上更为复杂的多元制的振幅相位混合调制方法，以达到更高的信息传输速率。)</p>
+<h3 id="2-2-3-信道的极限容量"><a href="#2-2-3-信道的极限容量" class="headerlink" title="2.2.3 信道的极限容量"></a>2.2.3 信道的极限容量</h3><p>数字通信的优点：虽然信号在信道上传输时会不可避免地产生失真，但在接收端只要我们从失真的波形中能够识别出原来的信号，那么这种失真对通信质量就没有影响。</p>
+<p>码元传输的速率越高，或信号传输的距离越远，或噪声干扰越大，或传输媒体质量越差，在接收端的波形失真就越严重。</p>
+<p>概念上，限制码元在信道上的传输速率的因素有两个：</p>
 <ol>
-<li>差错控制</li>
-<li>流量控制</li>
-<li>分段和重装</li>
-<li>复用和分用</li>
-<li>连接建立和释放</li>
+<li><p><strong>信道能够通过的频率范围</strong></p>
+<p>信号中的许多高频分量有时不能通过信道或者传输时受到衰减，那么波形前沿和后沿则变得不那么陡峭，每个码元所占时间界限也不是很明确，这种现象叫做<strong>码间串扰</strong>。</p>
+<p><strong>奈氏准则</strong>： 在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的码间串扰问题，使接收端对码元的判决(识别)成为不可能。</p>
+</li>
+<li><p><strong>信噪比</strong></p>
+<p>信噪比即为信号的平均功率和噪声的平均功率只比，常记为S/N，单位为分贝(dB)。</p>
+</li>
 </ol>
-<p>计算机网络的体系结构就是这个计算机网络及其构件所应完成的功能的精确定义。</p>
-<h3 id="具有五层协议的体系结构"><a href="#具有五层协议的体系结构" class="headerlink" title="具有五层协议的体系结构"></a>具有五层协议的体系结构</h3><p>(五层协议的体系结构只是为介绍网络原理而设计，实际应用TCP/IP是四层体系结构)</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<div class="tabs" id="五层协议的体系结构"><ul class="nav-tabs"><li class="tab active"><a href="#五层协议的体系结构-1">应用层</a></li><li class="tab"><a href="#五层协议的体系结构-2">运输层</a></li><li class="tab"><a href="#五层协议的体系结构-3">网络层</a></li><li class="tab"><a href="#五层协议的体系结构-4">数据链路层</a></li><li class="tab"><a href="#五层协议的体系结构-5">物理层</a></li></ul><div class="tab-content"><div class="tab-pane active" id="五层协议的体系结构-1"><p>(application layer)</p>
-<p>任务是通过应用进程间的交互来完成特定的网络应用。</p>
-<p>应用层协议定义的是应用进程间通信和交互的规则。</p>
-<p>应用层交互的数据单元成为报文(message)。</p></div><div class="tab-pane" id="五层协议的体系结构-2"><p>(transport layer)</p>
-<p>任务是负责向两台主机中进程之间的通信提供通用的数据传输服务。</p>
-<p>运输层主要用两种协议：传输控制协议TCP与用户数据报协议UDP。</p>
-<div class="tabs" id="sub-传输层"><ul class="nav-tabs"><li class="tab active"><a href="#sub-传输层-1">传输控制协议</a></li><li class="tab"><a href="#sub-传输层-2">用户数据报协议</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sub-传输层-1"><p>(Transmission Control Protocol)</p>
-<p>提供面向连接的、可靠的数据传输服务，数据传输单位是报文段。</p></div><div class="tab-pane" id="sub-传输层-2"><p>(User Datagram Protocol)</p>
-<p>提供无连接的、尽最大努力的数据传输服务(不保证可靠性)，数据传输单位是用户数据报。</p></div></div></div></div><div class="tab-pane" id="五层协议的体系结构-3"><p>(network layer)</p>
-<p>任务是为分组交换网上的不同主机提供通信服务。</p>
-<p>分组也被称为IP数据报，或简称数据报。</p>
-<p>网络层又称网际层或IP层。</p></div><div class="tab-pane" id="五层协议的体系结构-4"><p>(data link layer)</p>
-<p>常简称为链路层。</p>
-<p>在两个相邻结点间传送数据时，数据链路层将网络层交下来的IP数据报组装成帧，再在链路上传送帧。</p></div><div class="tab-pane" id="五层协议的体系结构-5"><p>物理层上所传数据的单位是比特。</p>
-<p>考虑多大电压代表”1”或”0”， 还要确定连接电缆的插头有多少根引脚以及引脚的连接方式。</p></div></div></div>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-4.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h3 id="实体、协议、服务和服务访问点"><a href="#实体、协议、服务和服务访问点" class="headerlink" title="实体、协议、服务和服务访问点"></a>实体、协议、服务和服务访问点</h3><p>实体表示任何可发送或接收信息的硬件或软件进程。</p>
-<p>协议是控制两个对等实体(或多个实体)进行通信的规则的集合。</p>
-<p>在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务，要实现本层协议，还要使用下面一层所提供的的服务。</p>
-<p>在同一系统中相邻两层的实体进行交互的地方，同城成为服务访问点SAP。实际上是个逻辑接口。</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-5.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h3 id="TCP-TP的体系结构"><a href="#TCP-TP的体系结构" class="headerlink" title="TCP/TP的体系结构"></a>TCP/TP的体系结构</h3><p>TCP/IP可以为各式各样的应用提供服务</p>
-<p>TCP/IP允许IP协议在各式各样的网络构成的互联网上运行</p>
-<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/1.7-6.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<h2 id="章节重要概念"><a href="#章节重要概念" class="headerlink" title="章节重要概念"></a>章节重要概念</h2><ol>
-<li>计算机网络(可简称为网络)把许多计算机连接在一起，而互连网则把许多网络连接在一起，是网络的网络。</li>
-<li>以小写字母i开始的internet(互连网)是通用名词，泛指由多个计算机网络互连而成的网络。在这些网络之间的通信协议可以是任意的。</li>
-<li>以大写字母I开始的Internet(互联网)是专用名词，指当前全球最大的、开放的、且由众多网络相互连接而成的特定互连网，采用TCP/IP协议族作为通信规则，前身是美国的ARPANET。</li>
-<li>互联网现在采用存储转发的分组交换技术，以及三层ISP结构。</li>
-<li>互联网按工作方式可划分为边缘部分与核心部分。主机在网络的边缘部分，其作用是信息处理。路由器在网络的核心部分，作用是按存储转发方式进行分组交换。</li>
-<li>计算机通信是计算机中的进程之间的通信。计算机网络采用的通信方式是客户-服务器方式和对等连接方式。</li>
-<li>客户和服务器都是指通信中所涉及的应用进程。客户是服务请求方，服务器是服务提供方。</li>
-<li>按作用范围的不同，计算机网络分为广域网WAN、城域网MAN、局域网LAN和个人区域网PAN。</li>
-<li>计算机网络最常用的性能指标是：速率、带宽、吞吐量、时延(发送时延、传播时延、处理时延、排队时延)、时延带宽积、往返时间和信道(或网络)利用率。</li>
-<li>网络协议即协议，是为进行网络中的数据交换而建立的规则。计算机网络的各层及其协议的集合，称为网络的体系结构。</li>
-<li>五层协议的体系结构由应用层、运输层、网络层(或网际层)、数据链路层和物理层组成。运输层最重要的协议是TCP和UDP协议，而网络层最重要的协议是IP协议。</li>
+<script type="math/tex; mode=display">
+   信噪比(dB)=10log_{10}(S/N) (dB)</script><p>   <strong>香农公式</strong>：信道的极限信息传输速率C是</p>
+<script type="math/tex; mode=display">
+  C=Wlog_2(1+S/N)(bit/s)</script><p>   其中，W为信道的带宽(单位:Hz)，S为信道内所传信号的平均功率，N为信道内不得高斯噪声功率。</p>
+<p>   香农公式表明：信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。</p>
+<p>   香农公式意义：只要信息传输速率低于信道的极限信息传输速率，就一定存在某种办法来实现无差错的传输。</p>
+<p>   提高信息传输速率的方法：通过编码的方法让每一个码元携带更多比特的信息量。</p>
+<hr>
+<hr>
+<h2 id="2-3-物理层下面的传输媒体"><a href="#2-3-物理层下面的传输媒体" class="headerlink" title="2.3 物理层下面的传输媒体"></a>2.3 物理层下面的传输媒体</h2><p><strong>传输媒体</strong>(又称传输介质或传输媒介)，是数据传输系统中在发送器和接收器之间的物理通路。可分为两大类：<strong>导引型传输媒体</strong>和<strong>非导引型传输媒体</strong>(“引导型”(guided)，也可译为”导向传输媒体”)。导引型中，电磁波沿着固体媒体传播，非导引型中，电磁波传输常称为无线传输。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-1.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-1.png" alt="图2.3-1 电信领域使用的电磁波频谱"></p>
+<h3 id="2-3-1-导引型传输媒体"><a href="#2-3-1-导引型传输媒体" class="headerlink" title="2.3.1 导引型传输媒体"></a>2.3.1 导引型传输媒体</h3><h4 id="双绞线"><a href="#双绞线" class="headerlink" title="双绞线"></a>双绞线</h4><p>又称双扭线，由两个互相绝缘的铜导线并排放在一起，然后用规则的方法绞合(twist)起来构成。几乎所有的电话都用双绞线连接到电话交换机，这段线称为<strong>用户线</strong>或<strong>用户环路</strong>。常将一定数量的双绞线捆成电缆外包护套使用。</p>
+<p>双绞线外面加一层用金属丝编织成的屏蔽层，便成了屏蔽双绞线，简称STP(Shielded Twisted Pair)，可提高双绞线抗电磁干扰能力。无屏蔽双绞线简称UTP(Unshielded Twisted Pair)。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-2.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-2.png" alt="图2.3-2 双绞线示意图"></p>
+<p>对传送数据来说，现在最常用的UTP是5类线(Category 5 或 CAT5)。5类线的绞合长度是0.6~0.85cm。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-3.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-3.png" alt="图2.3-3 常用的绞合线类别、带宽和典型应用"></p>
+<p>衰减随频率的升高而增大。</p>
+<p>导线粗可以降低衰减，但是重量和价格会增加。</p>
+<p>双绞线的最高速率还和数字信号的编码方法有很大关系。</p>
+<h4 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h4><p>同轴电缆由内导体铜制芯线(单股实心线或多股绞合线)、绝缘层、网状编织的外导体屏蔽层(也可单股)以及保护塑料外层所组成。具有很好的抗干扰特性，被广泛用于传输速率较高的数据。</p>
+<p>同轴电缆的带宽取决于电缆的质量。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-4.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-4.png" alt="图2.3-4 同轴电缆的结构"></p>
+<h4 id="光缆"><a href="#光缆" class="headerlink" title="光缆"></a>光缆</h4><p>光纤是光纤通信的传输媒体。在发送端有光源，可以采用发光二极管或半导体激光器，它们在电脉冲的作用下能产生光脉冲。在接收端利用光电二极管做成光检测器，在检测到光脉冲时可还原出电脉冲。</p>
+<p>光纤通常由非常透明的石英玻璃拉成细丝，主要由纤芯和包层构成双层通信圆柱体。包层较纤芯有较低的折射率，可以折射光线，从而传输光。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-5.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-5.png" alt="图2.3-5 光线在光纤中的折射"></p>
+<div class="tabs" id="光缆"><ul class="nav-tabs"><li class="tab active"><a href="#光缆-1">多模光纤</a></li><li class="tab"><a href="#光缆-2">单模光纤</a></li></ul><div class="tab-content"><div class="tab-pane active" id="光缆-1"><p>多模光纤：同时存在多条不同角度入射的光线在一条光纤中传输。</p>
+<p>因为光脉冲在多模光纤中国传输时会逐渐展宽，造成失真， 所以只适合于近距离传输。</p>
+<p><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-6.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
+<p><img src="../images/计算机网络/2.3-6.png" alt="图2.3-6 多模光纤"></p></div><div class="tab-pane" id="光缆-2"><p>单模光纤：光纤的直径减小到只有一个光的波长，则可使光纤一直向前传播，而不会产生多次反射。</p>
+<p>纤芯细，制造成本高，光源要使用昂贵的半导体激光器。 但衰耗较小。</p>
+<p><span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-7.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></p>
+<p><img src="../images/计算机网络/2.3-7.png" alt="图2.3-7 单模光纤"></p></div></div></div>
+<p>光纤极细，因此常做成光缆进行工程使用。下图为四芯光缆剖面示意图。</p>
+<span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/images/计算机网络/2.3-8.png" class="full-image"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
+<p><img src="../images/计算机网络/2.3-8.png" alt="图2.3-8 四芯光缆剖面"></p>
+<p>光纤特点：</p>
+<ol>
+<li>通信容量非常大。</li>
+<li>传输损耗小，中继距离长，对远距离传输特别经济。</li>
+<li>抗雷电和电磁干扰性能好。在有大电流脉冲干扰的环境下尤为重要。</li>
+<li>无串音干扰，保密性好，也不易被窃听或截取数据。</li>
+<li>体积小，重量轻。在现有电缆管道已拥堵不堪的情况下特别有利。</li>
 </ol>
-
+<h4 id="架空明线"><a href="#架空明线" class="headerlink" title="架空明线"></a>架空明线</h4><p>指在电线杆上架设的相互绝缘的明线。通信质量差，受气候环境等影响较大，许多国家已停止铺设架空明线，目前我国一些农村和边远地区的通信仍使用架空明线。</p>
+<h3 id="2-3-2-非引导型传输媒体"><a href="#2-3-2-非引导型传输媒体" class="headerlink" title="2.3.2 非引导型传输媒体"></a>2.3.2 非引导型传输媒体</h3><p>利用无线信道进行信息传输是在运动中通信的唯一手段。</p>
+<p>短波通信即高频通信主要是靠电离层的反射。但电离层的不稳定所产生的衰落现象和电离层反射产生的多径效应，使得短波信道的通信质量较差。因此短波通信一般都是低速传输。</p>
+<p>无线电微波通信传统上有两种方式，即地面微波接力通信和卫星通信。</p>
+<p>微波在空间主要是直线传播。而地球表面是曲面，因此传播距离一般只有50km左右。通过终端间建立多个中继站(将送来的信号经放大后发送给下一站，称为”接力”)可以实现远距离传输。</p>
+<p>微波接力通信主要特点：</p>
+<ol>
+<li>微波频段频率很高，其频段范围也很宽，因此其通信信道的容量很大。</li>
+<li>因为工业干扰和天电干扰的主要频谱成分比微波频率低得多，对微波通信的危害比对短波和米波(即甚高频)通信小得多，因而微波传输质量较高。</li>
+<li>与相同容量和长度的电缆载波通信比较，微波接力通信建设投资少，见效快，易于跨越山区、江河。</li>
+</ol>
+<p>微波接力通信存在缺点：</p>
+<ol>
+<li>相邻站之间必须直视(常称为LOS(Line Of Sight))，不能有障碍物。有时一个天线发射出的信号也会分成几条略有差别的路径到达接收天线，因而造成失真。</li>
+<li>微波的传输有时也会受到恶劣天气的影响。</li>
+<li>与电缆通信系统比较，微波通信的隐蔽性和保密性较差。</li>
+<li>对大量中继站的使用和维护要耗费较多的人力和物力。</li>
+</ol>
+<hr>
+<p>卫星通信是将人造同步地球卫星作为中继器。</p>
+<p>最大特点是通信距离远，且通信费用与通信距离无关。</p>
+<p>卫星通信的频带很宽，通信容量很大，信号所受到的干扰也较小，通信比较稳定。</p>
+<p>卫星通信有较大的传播时延。一般可取为270ms。地面微波接力通信链路的传播时延一般取为3.3μs/km。</p>
+<p>低轨道卫星通信系统也可使用。 </p>
+<p>红外通信、激光通信也使用非引导型媒体。</p>
+<hr>
+<hr>
+<h2 id="2-4-信道复用技术"><a href="#2-4-信道复用技术" class="headerlink" title="2.4 信道复用技术"></a>2.4 信道复用技术</h2><h3 id="频分复用、时分复用和统计时分复用"><a href="#频分复用、时分复用和统计时分复用" class="headerlink" title="频分复用、时分复用和统计时分复用"></a>频分复用、时分复用和统计时分复用</h3>
       
     </div>
 
@@ -745,12 +743,12 @@ WIDGET = {FID: 'xOIWAfdIEd'}
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
 
-  <p><span>本文标题:</span>计算机网络(第7版)谢希仁-第一章绪论</p>
+  <p><span>本文标题:</span>计算机网络(第7版)谢希仁-第二章物理层</p>
   <p><span>文章作者:</span>Snowakura</p>
-  <p><span>发布时间:</span>2019年07月27日 - 16:34:08</p>
-  <p><span>最后更新:</span>2019年08月20日 - 20:23:54</p>
-  <p><span>原始链接:</span><a href="/2019/07/27/计算机网络-第7版-谢希仁-第一章/" title="计算机网络(第7版)谢希仁-第一章绪论">https://snowakura.github.io/2019/07/27/计算机网络-第7版-谢希仁-第一章/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snowakura.github.io/2019/07/27/计算机网络-第7版-谢希仁-第一章/" aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年08月20日 - 19:52:56</p>
+  <p><span>最后更新:</span>2019年10月28日 - 11:35:25</p>
+  <p><span>原始链接:</span><a href="/2019/08/20/计算机网络-第7版-谢希仁-第二章/" title="计算机网络(第7版)谢希仁-第二章物理层">https://snowakura.github.io/2019/08/20/计算机网络-第7版-谢希仁-第二章/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://snowakura.github.io/2019/08/20/计算机网络-第7版-谢希仁-第二章/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -801,8 +799,8 @@ WIDGET = {FID: 'xOIWAfdIEd'}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/27/设计模式/" rel="next" title="设计模式">
-                <i class="fa fa-chevron-left"></i> 设计模式
+              <a href="/2019/08/20/数据结构题集-C语言版-第一章/" rel="next" title="数据结构题集(C语言版)第一章">
+                <i class="fa fa-chevron-left"></i> 数据结构题集(C语言版)第一章
               </a>
             
           </div>
@@ -811,8 +809,8 @@ WIDGET = {FID: 'xOIWAfdIEd'}
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/08/20/数据结构题集-C语言版-第一章/" rel="prev" title="数据结构题集(C语言版)第一章">
-                数据结构题集(C语言版)第一章 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/20/数据结构题集-C语言版-第二章/" rel="prev" title="数据结构题集(C语言版)第二章">
+                数据结构题集(C语言版)第二章 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1010,7 +1008,7 @@ WIDGET = {FID: 'xOIWAfdIEd'}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络在信息时代中的作用"><span class="nav-number">1.</span> <span class="nav-text">计算机网络在信息时代中的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网概述"><span class="nav-number">2.</span> <span class="nav-text">互联网概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络的网络"><span class="nav-number">2.1.</span> <span class="nav-text">网络的网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网基础结构发展的三个阶段"><span class="nav-number">2.2.</span> <span class="nav-text">互联网基础结构发展的三个阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的标准化工作"><span class="nav-number">2.3.</span> <span class="nav-text">互联网的标准化工作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#互联网的组成"><span class="nav-number">3.</span> <span class="nav-text">互联网的组成</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的边缘部分"><span class="nav-number">3.1.</span> <span class="nav-text">互联网的边缘部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#互联网的核心部分"><span class="nav-number">3.2.</span> <span class="nav-text">互联网的核心部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络在我国的发展"><span class="nav-number">4.</span> <span class="nav-text">计算机网络在我国的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络的类别"><span class="nav-number">5.</span> <span class="nav-text">计算机网络的类别</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的定义"><span class="nav-number">5.1.</span> <span class="nav-text">计算机网络的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#几种不同类别的计算机网络"><span class="nav-number">5.2.</span> <span class="nav-text">几种不同类别的计算机网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络的性能"><span class="nav-number">6.</span> <span class="nav-text">计算机网络的性能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的性能指标"><span class="nav-number">6.1.</span> <span class="nav-text">计算机网络的性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#速率"><span class="nav-number">6.1.1.</span> <span class="nav-text">速率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#带宽"><span class="nav-number">6.1.2.</span> <span class="nav-text">带宽</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#吞吐量"><span class="nav-number">6.1.3.</span> <span class="nav-text">吞吐量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时延"><span class="nav-number">6.1.4.</span> <span class="nav-text">时延</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#时延带宽积"><span class="nav-number">6.1.5.</span> <span class="nav-text">时延带宽积</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#往返时间RTT"><span class="nav-number">6.1.6.</span> <span class="nav-text">往返时间RTT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#利用率"><span class="nav-number">6.1.7.</span> <span class="nav-text">利用率</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络的非性能特征"><span class="nav-number">6.2.</span> <span class="nav-text">计算机网络的非性能特征</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络体系结构"><span class="nav-number">7.</span> <span class="nav-text">计算机网络体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络体系结构的形成"><span class="nav-number">7.1.</span> <span class="nav-text">计算机网络体系结构的形成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#协议与划分层次"><span class="nav-number">7.2.</span> <span class="nav-text">协议与划分层次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具有五层协议的体系结构"><span class="nav-number">7.3.</span> <span class="nav-text">具有五层协议的体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实体、协议、服务和服务访问点"><span class="nav-number">7.4.</span> <span class="nav-text">实体、协议、服务和服务访问点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-TP的体系结构"><span class="nav-number">7.5.</span> <span class="nav-text">TCP/TP的体系结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#章节重要概念"><span class="nav-number">8.</span> <span class="nav-text">章节重要概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#—"><span class="nav-number">1.</span> <span class="nav-text">—-</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-物理层的基本概念"><span class="nav-number">2.</span> <span class="nav-text">2.1 物理层的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-数据通信的基础知识"><span class="nav-number">3.</span> <span class="nav-text">2.2 数据通信的基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-1-数据通信系统的模型"><span class="nav-number">3.1.</span> <span class="nav-text">2.2.1 数据通信系统的模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-2-有关信道的几个基本概念"><span class="nav-number">3.2.</span> <span class="nav-text">2.2.2 有关信道的几个基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3-信道的极限容量"><span class="nav-number">3.3.</span> <span class="nav-text">2.2.3 信道的极限容量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-物理层下面的传输媒体"><span class="nav-number">4.</span> <span class="nav-text">2.3 物理层下面的传输媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-导引型传输媒体"><span class="nav-number">4.1.</span> <span class="nav-text">2.3.1 导引型传输媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#双绞线"><span class="nav-number">4.1.1.</span> <span class="nav-text">双绞线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同轴电缆"><span class="nav-number">4.1.2.</span> <span class="nav-text">同轴电缆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#光缆"><span class="nav-number">4.1.3.</span> <span class="nav-text">光缆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#架空明线"><span class="nav-number">4.1.4.</span> <span class="nav-text">架空明线</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-非引导型传输媒体"><span class="nav-number">4.2.</span> <span class="nav-text">2.3.2 非引导型传输媒体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-信道复用技术"><span class="nav-number">5.</span> <span class="nav-text">2.4 信道复用技术</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#频分复用、时分复用和统计时分复用"><span class="nav-number">5.1.</span> <span class="nav-text">频分复用、时分复用和统计时分复用</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1258,7 +1256,7 @@ setInterval("createtime()",250);
 
 <script>
   window.livereOptions = {
-    refer: '2019/07/27/计算机网络-第7版-谢希仁-第一章/'
+    refer: '2019/08/20/计算机网络-第7版-谢希仁-第二章/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
