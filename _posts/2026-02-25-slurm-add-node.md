@@ -2,7 +2,7 @@
 title: "Slurm集群增加新计算节点"
 data: 2026-02-25 17:17:00 +0800
 categories: [Slurm]
-tags: [Slurm, Depolyment]
+tags: [Slurm, Deployment]
 
 ---
 
